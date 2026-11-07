@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BioNuTech · 8' × 5' Expo Booth Backdrop &amp; 33" × 80" Vertical Banner System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-obsidian: #09120D;
+      --bg-panel: #101E16;
+      --forest-deep: #11321F;
+      --forest-rich: #1B4D2E;
+      --leaf-bright: #68B645;
+      --earth-warm: #7A4B2A;
+      --gold-champagne: #DFC082;
+      --gold-mid: #C69F59;
+      --ivory-warm: #F8F6F0;
+      --text-light: #F2F5F3;
+      --text-muted: #9EB3A5;
+      --border-gold: rgba(198, 159, 89, 0.32);
+      --border-subtle: rgba(158, 179, 165, 0.16);
+      --serif-fraunces: 'Fraunces', Georgia, serif;
+      --serif-cormorant: 'Cormorant Garamond', Georgia, serif;
+      --sans-jakarta: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      --sans-outfit: 'Outfit', sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-obsidian);
+      background-image:
+        radial-gradient(circle at 15% 10%, rgba(27, 77, 46, 0.35), transparent 45%),
+        radial-gradient(circle at 85% 20%, rgba(198, 159, 89, 0.1), transparent 40%);
+      color: var(--text-light);
+      font-family: var(--sans-jakarta);
+      -webkit-font-smoothing: antialiased;
+      padding: 32px 40px 46px;
+    }
+
+    .board {
+      max-width: 1580px;
+      margin: 0 auto;
+    }
+
+    /* Top Header */
+    .top-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border-gold);
+    }
+
+    .header-left .kicker {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-champagne);
+      margin-bottom: 5px;
+    }
+
+    .header-left h1 {
+      font-family: var(--serif-fraunces);
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--text-light);
+      letter-spacing: -0.01em;
+    }
+    .header-left h1 span {
+      color: var(--gold-champagne);
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 12px;
+    }
+    .btn {
+      padding: 10px 16px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .btn-outline {
+      border: 1px solid var(--border-gold);
+      background: rgba(16, 30, 22, 0.85);
+      color: var(--gold-champagne);
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-champagne), var(--gold-mid));
+      color: #09120D;
+      font-weight: 700;
+    }
+
+    /* Section Label */
+    .section-bar {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .section-bar h2 {
+      font-family: var(--serif-fraunces);
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--text-light);
+    }
+    .section-bar span {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold-champagne);
+    }
+
+    /* ROW 1: 8' x 5' Master Backdrop + Accompanying 33" x 80" Vertical Pop-Up Banner */
+    .booth-showcase-row {
+      display: grid;
+      grid-template-columns: 1.52fr 0.48fr;
+      gap: 24px;
+      margin-bottom: 30px;
+      align-items: stretch;
+    }
+
+    .canvas-wrapper {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-gold);
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.55);
+    }
+
+    .canvas-meta-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .canvas-meta-top strong {
+      color: var(--gold-champagne);
+    }
+
+    /* THE 8' x 5' (96" x 60" = 1.6 : 1) MASTER BACKDROP ARTBOARD */
+    .backdrop-8x5 {
+      aspect-ratio: 16 / 10;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: url('assets/field-clean-bg.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 28px 36px 26px;
+    }
+
+    /* Subtle optical sky vignette so upper typography has 10m aisle contrast while keeping bright California sky */
+    .backdrop-8x5::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.72) 38%, rgba(255, 255, 255, 0.15) 56%, rgba(10, 26, 16, 0.35) 78%, rgba(9, 22, 14, 0.88) 100%);
+      pointer-events: none;
+    }
+
+    /* Print-Safe 2.5" Bleed/Margin Hairline Guide */
+    .safe-margin-guide {
+      position: absolute;
+      inset: 14px;
+      border: 1px dashed rgba(17, 50, 31, 0.25);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Top Row inside 8x5 Backdrop: Brand Identity Lockup (Left) + Executive Contact & QR Card (Right) */
+    .backdrop-top {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .brand-plaque {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(252, 251, 247, 0.92);
+      backdrop-filter: blur(8px);
+      padding: 12px 22px 10px 18px;
+      border-radius: 6px;
+      border: 1px solid rgba(17, 50, 31, 0.18);
+      border-left: 5px solid var(--forest-deep);
+      box-shadow: 0 12px 28px rgba(9, 22, 14, 0.14);
+    }
+    .brand-plaque img {
+      height: 82px;
+      width: auto;
+      display: block;
+    }
+    .brand-plaque-text {
+      border-left: 1px solid rgba(17, 50, 31, 0.18);
+      padding-left: 14px;
+    }
+    .brand-plaque-text .full-name {
+      font-family: var(--sans-jakarta);
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.22;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--forest-deep);
+    }
+    .brand-plaque-text .full-name span {
+      display: block;
+      color: var(--earth-warm);
+    }
+    .brand-plaque-text .sub-tag {
+      font-family: var(--mono);
+      font-size: 8.5px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #4A6353;
+      margin-top: 4px;
+    }
+
+    .contact-plaque {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(17, 50, 31, 0.94);
+      color: var(--ivory-warm);
+      padding: 11px 16px;
+      border-radius: 6px;
+      border: 1px solid rgba(223, 192, 130, 0.45);
+      box-shadow: 0 12px 28px rgba(9, 22, 14, 0.22);
+    }
+    .contact-details {
+      text-align: right;
+    }
+    .contact-details .url {
+      font-family: var(--sans-jakarta);
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: var(--gold-champagne);
+    }
+    .contact-details .email {
+      font-size: 11px;
+      font-weight: 500;
+      color: #E2ECE5;
+      margin-top: 2px;
+    }
+    .contact-details .phone {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 600;
+      color: #FFFFFF;
+      letter-spacing: 0.08em;
+      margin-top: 2px;
+    }
+    .contact-qr {
+      width: 54px;
+      height: 54px;
+      border-radius: 4px;
+      background: #FFFFFF;
+      padding: 3px;
+      display: block;
+    }
+
+    /* Center Eye-Level Focal Zone (10m < 3s Readability) */
+    .backdrop-focal-center {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      max-width: 86%;
+      margin: -12px auto 0;
+      background: rgba(252, 251, 247, 0.88);
+      backdrop-filter: blur(10px);
+      padding: 20px 38px 22px;
+      border-radius: 8px;
+      border: 1px solid rgba(17, 50, 31, 0.16);
+      box-shadow: 0 18px 40px rgba(9, 22, 14, 0.18);
+    }
+    .backdrop-focal-center .lead-in {
+      font-family: var(--serif-fraunces);
+      font-size: 23px;
+      font-weight: 500;
+      font-style: italic;
+      color: #263E30;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+    .backdrop-focal-center .hero-hook {
+      font-family: var(--sans-jakarta);
+      font-size: 56px;
+      font-weight: 800;
+      line-height: 1.02;
+      letter-spacing: -0.025em;
+      color: var(--forest-deep);
+      margin-bottom: 12px;
+    }
+    .backdrop-focal-center .hero-hook .diff-word {
+      color: var(--earth-warm);
+    }
+    .backdrop-focal-center .hero-hook .nt-highlight {
+      color: var(--forest-rich);
+      background: linear-gradient(180deg, #1B4D2E 0%, #2E7D32 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      border-bottom: 4px solid var(--leaf-bright);
+      padding-bottom: 1px;
+    }
+
+    /* Three Pillars Strip inside Center Focal Card */
+    .promise-pills {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--forest-deep);
+      color: var(--ivory-warm);
+      padding: 8px 20px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 1px solid var(--gold-mid);
+    }
+    .promise-pills .dot {
+      color: var(--leaf-bright);
+      font-size: 15px;
+    }
+
+    /* Bottom Dock inside 8x5 Backdrop */
+    .backdrop-bottom-dock {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(9, 22, 14, 0.86);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(223, 192, 130, 0.35);
+      border-radius: 6px;
+      padding: 10px 20px;
+      color: var(--ivory-warm);
+    }
+    .dock-metric {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .dock-metric strong {
+      color: var(--gold-champagne);
+      font-family: var(--mono);
+    }
+
+    /* ACCOMPANYING 33" x 80" VERTICAL POP-UP BANNER */
+    .vertical-banner-33x80 {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background:
+        linear-gradient(180deg, rgba(252, 251, 247, 0.95) 0%, rgba(252, 251, 247, 0.88) 46%, rgba(17, 50, 31, 0.94) 72%, rgba(9, 22, 14, 0.98) 100%),
+        url('assets/field-clean-bg.jpg') center/cover no-repeat;
+      padding: 20px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+    }
+    .v-top-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 1px solid rgba(17, 50, 31, 0.16);
+      padding-bottom: 10px;
+    }
+    .v-top-logo img {
+      height: 64px;
+      width: auto;
+    }
+    .v-top-logo span {
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--forest-deep);
+      margin-top: 4px;
+    }
+    .v-hook-block {
+      margin: 10px 0;
+    }
+    .v-hook-block .sub {
+      font-family: var(--serif-fraunces);
+      font-style: italic;
+      font-size: 13px;
+      color: #2B4636;
+    }
+    .v-hook-block h3 {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--forest-deep);
+      letter-spacing: -0.02em;
+      line-height: 1.08;
+      margin: 3px 0 6px;
+    }
+    .v-hook-block h3 em {
+      font-style: normal;
+      color: var(--earth-warm);
+    }
+    .v-offerings-list {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      text-align: left;
+      margin: 6px 0;
+    }
+    .v-offering-card {
+      background: rgba(17, 50, 31, 0.9);
+      border: 1px solid rgba(223, 192, 130, 0.35);
+      border-left: 3px solid var(--leaf-bright);
+      padding: 7px 10px;
+      border-radius: 4px;
+      color: var(--ivory-warm);
+    }
+    .v-offering-card strong {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-champagne);
+    }
+    .v-offering-card span {
+      font-size: 9.5px;
+      color: #D6E4DA;
+      line-height: 1.3;
+    }
+    .v-bottom-cta {
+      border-top: 1px solid rgba(223, 192, 130, 0.3);
+      padding-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+    }
+    .v-bottom-cta .txt strong {
+      display: block;
+      font-size: 12px;
+      color: var(--gold-champagne);
+    }
+    .v-bottom-cta .txt span {
+      display: block;
+      font-size: 9.5px;
+      color: #E2ECE5;
+    }
+    .v-bottom-cta img {
+      width: 42px;
+      height: 42px;
+      background: #FFF;
+      padding: 2px;
+      border-radius: 3px;
+    }
+
+    /* ROW 2: Composition Audit (Before vs After) + 3 Recommended Font Pairings */
+    .audit-and-fonts-row {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 24px;
+    }
+
+    .panel-card {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 18px 20px;
+    }
+
+    .before-after-grid {
+      display: grid;
+      grid-template-columns: 0.88fr 1.12fr;
+      gap: 14px;
+      margin-top: 12px;
+      align-items: center;
+    }
+    .before-thumb-box {
+      position: relative;
+      border: 1px solid rgba(248, 113, 113, 0.4);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .before-thumb-box img {
+      width: 100%;
+      display: block;
+    }
+    .before-badge {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      background: rgba(127, 29, 29, 0.9);
+      color: #FECACA;
+      font-family: var(--mono);
+      font-size: 8.5px;
+      padding: 3px 7px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .audit-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .audit-list li {
+      background: rgba(9, 18, 13, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-left: 3px solid var(--gold-champagne);
+      padding: 7px 10px;
+      font-size: 10.5px;
+      line-height: 1.38;
+    }
+    .audit-list li strong {
+      display: block;
+      color: var(--gold-champagne);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    /* 3 Font Pairings Grid */
+    .font-pairings-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .pairing-card {
+      background: rgba(9, 18, 13, 0.78);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .pairing-card.active {
+      border-color: var(--gold-champagne);
+      background: rgba(27, 77, 46, 0.28);
+    }
+    .pairing-tag {
+      font-family: var(--mono);
+      font-size: 8.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold-champagne);
+      margin-bottom: 6px;
+    }
+    .sample-lead {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+    }
+    .sample-hook {
+      font-size: 21px;
+      line-height: 1.1;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+    .pairing-meta {
+      font-size: 9.5px;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 7px;
+      line-height: 1.38;
+    }
+    .pairing-meta strong {
+      color: var(--text-light);
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="board">
+    <header class="top-header">
+      <div class="header-left">
+        <div class="kicker">CONTEST #2800532 · BIONUTECH LARGE-FORMAT TRADE SHOW GRAPHICS SYSTEM</div>
+        <h1>8' × 5' Expo Booth Backdrop &amp; <span>33" × 80" Vertical Pop-Up Banner</span></h1>
+      </div>
+      <div class="header-actions">
+        <a class="btn btn-outline" href="exports/BioNuTech_8x5_Editable_LiveText.svg" download>Download Live-Text .SVG</a>
+        <a class="btn btn-outline" href="exports/BioNuTech_8x5_CMYK_PressReady_Outlined.pdf" download>Download Press-Ready CMYK .PDF</a>
+        <a class="btn btn-gold" href="exports/BioNuTech_Expo_Booth_Master_Pack.zip" download>Download Full Booth Pack (ZIP)</a>
+      </div>
+    </header>
+
+    <div class="section-bar">
+      <h2>I. Refined 8' × 5' (96" × 60") Expo Backdrop &amp; Coordinated Vertical Pop-Up Banner</h2>
+      <span>✓ 10m Aisle Readability (&lt; 3 Seconds) · ✓ 150 DPI at Full Scale · ✓ CMYK Gamut Safe · ✓ 2.5" Print-Safe Margins</span>
+    </div>
+
+    <section class="booth-showcase-row">
+      <!-- Left: 8' x 5' Master Backdrop -->
+      <div class="canvas-wrapper">
+        <div class="canvas-meta-top">
+          <strong>01 · Master 8' × 5' (96" × 60") Backdrop · Pairing I Applied</strong>
+          <span>Eye-Level Focal Architecture · Upper 65% Table-Clearance Safe Zone</span>
+        </div>
+
+        <div class="backdrop-8x5">
+          <div class="safe-margin-guide"></div>
+
+          <!-- Top Header Bar: Brand Identity Left + Contact & Scan QR Right -->
+          <div class="backdrop-top">
+            <div class="brand-plaque">
+              <img src="assets/bnt-root-mark.png" alt="BNT Biological Nutrient Technologies Root Logo" />
+              <div class="brand-plaque-text">
+                <div class="full-name">
+                  Biological<br/>
+                  <span>Nutrient</span>
+                  Technologies
+                </div>
+                <div class="sub-tag">Advanced Soil &amp; Plant Science</div>
+              </div>
+            </div>
+
+            <div class="contact-plaque">
+              <div class="contact-details">
+                <div class="url">BioNuTech.com</div>
+                <div class="email">JeffGr@BioNuTech.com</div>
+                <div class="phone">805 · 714 · 0173</div>
+              </div>
+              <img class="contact-qr" src="assets/qr-bionutech.png" alt="Scan to Visit BioNuTech.com" />
+            </div>
+          </div>
+
+          <!-- Eye-Level 3-Second Aisle Focal Hook -->
+          <div class="backdrop-focal-center">
+            <div class="lead-in">In a world where everyone else is the same,</div>
+            <div class="hero-hook">
+              Be <span class="diff-word">differe</span><span class="nt-highlight">NT.</span>
+            </div>
+            <div class="promise-pills">
+              <span>Biological Plant Nutrition</span>
+              <span class="dot">·</span>
+              <span>Organic Acids</span>
+              <span class="dot">·</span>
+              <span>Reliable Results</span>
+            </div>
+          </div>
+
+          <!-- Bottom Horizon Frame Bar -->
+          <div class="backdrop-bottom-dock">
+            <div class="dock-metric">
+              <strong>ROOT-ZONE BIOAVAILABILITY</strong>
+              <span>Engineered for High-Yield Commercial Growers</span>
+            </div>
+            <div class="dock-metric">
+              <strong>VISIT OUR BOOTH</strong>
+              <span>Live Product Samples &amp; Agronomic Consultation · BioNuTech.com</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="canvas-meta-top" style="margin-top:10px;margin-bottom:0;">
+          <span>Press Spec: 96" W × 60" H (+ 0.25" Bleed) · CMYK Process Profile</span>
+          <span>Deliverables: Outlined Print PDF + Live Editable Vector Source</span>
+        </div>
+      </div>
+
+      <!-- Right: Accompanying 33" x 80" Vertical Pop-Up Banner -->
+      <div class="canvas-wrapper">
+        <div class="canvas-meta-top">
+          <strong>02 · Vertical Banner (33" × 80")</strong>
+          <span>Coordinated Booth Companion</span>
+        </div>
+
+        <div class="vertical-banner-33x80">
+          <div class="v-top-logo">
+            <img src="assets/bnt-root-mark.png" alt="BNT Root Mark" />
+            <span>Biological Nutrient Technologies</span>
+          </div>
+
+          <div class="v-hook-block">
+            <div class="sub">Where everyone else is the same,</div>
+            <h3>Be <em>differe</em>NT.</h3>
+          </div>
+
+          <div class="v-offerings-list">
+            <div class="v-offering-card">
+              <strong>01 · Biological Plant Nutrition</strong>
+              <span>Targeted microbial &amp; rhizosphere vitality for vigorous root systems.</span>
+            </div>
+            <div class="v-offering-card">
+              <strong>02 · Organic Acids Complex</strong>
+              <span>Superior chelation &amp; nutrient uptake efficiency across soil types.</span>
+            </div>
+            <div class="v-offering-card">
+              <strong>03 · Reliable Field Results</strong>
+              <span>Consistent crop uniformity, stress resilience &amp; measurable ROI.</span>
+            </div>
+          </div>
+
+          <div class="v-bottom-cta">
+            <div class="txt">
+              <strong>BioNuTech.com</strong>
+              <span>JeffGr@BioNuTech.com</span>
+              <span>805-714-0173</span>
+            </div>
+            <img src="assets/qr-bionutech.png" alt="QR" />
+          </div>
+        </div>
+
+        <div class="canvas-meta-top" style="margin-top:10px;margin-bottom:0;">
+          <span>Retractable Stand Ready</span>
+          <span>Included in Master ZIP</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROW 2: Audit & 3 Font Pairings -->
+    <section class="audit-and-fonts-row">
+      <div class="panel-card">
+        <div class="section-bar" style="margin-bottom:6px;">
+          <h2>II. Spatial &amp; Hierarchy Audit (Original vs. Refined)</h2>
+          <span>Why Visitors Pause in &lt; 3 Seconds</span>
+        </div>
+        <div class="before-after-grid">
+          <div class="before-thumb-box">
+            <span class="before-badge">Original Draft</span>
+            <img src="assets/original-before.jpg" alt="Original Draft" />
+          </div>
+          <ul class="audit-list">
+            <li>
+              <strong>1. Contrast &amp; Sky Glare Fixed</strong>
+              Original dark text floated directly on bright clouds with low contrast. Frosted architectural plaques lock in 10m readability.
+            </li>
+            <li>
+              <strong>2. 3-Second Focal Hierarchy</strong>
+              Elevated "Be differeNT" to 420pt equivalent scale with a botanical underline on "NT" to echo the BNT brand monogram.
+            </li>
+            <li>
+              <strong>3. Executive Contact + QR Dock</strong>
+              Grouped BioNuTech.com, email, phone, and instant-scan QR into a high-contrast forest-and-gold badge at upper-right eye level.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel-card">
+        <div class="section-bar" style="margin-bottom:6px;">
+          <h2>III. Three Recommended Premium Font Pairings</h2>
+          <span>All 3 Included in Working Files</span>
+        </div>
+        <div class="font-pairings-grid">
+          <div class="pairing-card active">
+            <div>
+              <div class="pairing-tag">Pairing I · Applied Master</div>
+              <div class="sample-lead" style="font-family:var(--serif-fraunces);font-style:italic;">In a world where everyone else...</div>
+              <div class="sample-hook" style="font-family:var(--sans-jakarta);font-weight:800;">Be differeNT.</div>
+            </div>
+            <div class="pairing-meta">
+              <strong>Fraunces Italic + Plus Jakarta Sans ExtraBold</strong>
+              Combines editorial agricultural heritage with commanding 10-meter geometric punch.
+            </div>
+          </div>
+
+          <div class="pairing-card">
+            <div>
+              <div class="pairing-tag">Pairing II · Biotech Precision</div>
+              <div class="sample-lead" style="font-family:var(--sans-outfit);font-weight:500;">In a world where everyone else...</div>
+              <div class="sample-hook" style="font-family:var(--sans-outfit);font-weight:700;">Be differeNT.</div>
+            </div>
+            <div class="pairing-meta">
+              <strong>Outfit Bold + DM Sans Medium</strong>
+              Clean, contemporary scientific authority with open counters for wide-angle aisle viewing.
+            </div>
+          </div>
+
+          <div class="pairing-card">
+            <div>
+              <div class="pairing-tag">Pairing III · Classic Luxury</div>
+              <div class="sample-lead" style="font-family:var(--serif-cormorant);font-style:italic;font-size:14px;">In a world where everyone else...</div>
+              <div class="sample-hook" style="font-family:var(--serif-cormorant);font-weight:700;font-size:24px;">Be differeNT.</div>
+            </div>
+            <div class="pairing-meta">
+              <strong>Cormorant Garamond Bold + Plus Jakarta Sans</strong>
+              High-fashion editorial contrast suited for executive investor &amp; distributor expos.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
