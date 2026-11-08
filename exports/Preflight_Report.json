@@ -1,0 +1,34 @@
+{
+  "BioNuTech_8x5_CMYK_PressReady_Outlined.pdf": {
+    "media_inches": [
+      96.5,
+      60.5
+    ],
+    "trim_inches": [
+      96.0,
+      60.0
+    ],
+    "font_count": 0,
+    "extracted_text_chars": 0,
+    "image_colorspaces": [
+      "DeviceCMYK"
+    ]
+  },
+  "BioNuTech_33x80_CMYK_Outlined.pdf": {
+    "media_inches": [
+      33.5,
+      80.5
+    ],
+    "trim_inches": [
+      33.0,
+      80.0
+    ],
+    "font_count": 0,
+    "extracted_text_chars": 0,
+    "image_colorspaces": [
+      "DeviceCMYK"
+    ]
+  },
+  "photo_native_dpi": 20,
+  "release_status": "HOLD: higher-resolution photo and vector logo, printer profile/proof required"
+}

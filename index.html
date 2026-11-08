@@ -1,826 +1,289 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioNuTech · 8' × 5' Expo Booth Backdrop &amp; 33" × 80" Vertical Banner System</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-obsidian: #09120D;
-      --bg-panel: #101E16;
-      --forest-deep: #11321F;
-      --forest-rich: #1B4D2E;
-      --leaf-bright: #68B645;
-      --earth-warm: #7A4B2A;
-      --gold-champagne: #DFC082;
-      --gold-mid: #C69F59;
-      --ivory-warm: #F8F6F0;
-      --text-light: #F2F5F3;
-      --text-muted: #9EB3A5;
-      --border-gold: rgba(198, 159, 89, 0.32);
-      --border-subtle: rgba(158, 179, 165, 0.16);
-      --serif-fraunces: 'Fraunces', Georgia, serif;
-      --serif-cormorant: 'Cormorant Garamond', Georgia, serif;
-      --sans-jakarta: 'Plus Jakarta Sans', -apple-system, sans-serif;
-      --sans-outfit: 'Outfit', sans-serif;
-      --mono: 'JetBrains Mono', monospace;
-    }
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>BioNuTech · 8' × 5' Expo Booth Backdrop &amp; 33" × 80" Banner System</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500;1,600;1,700&family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#144524;--forest-deep:#0E3019;--earth:#704224;--gold:#C69F59;--gold-lt:#DFC082;--ivory:#FAF8F2;
+--leaf:#4C9A3A;--ink:#09120D;--panel:#101E16;--muted:#9EB3A5;--jak:'Plus Jakarta Sans',-apple-system,sans-serif;
+--mono:'JetBrains Mono',ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+.pair-1{--f-lead:'Fraunces',Georgia,serif;--lead-st:italic;--lead-w:500;--lead-k:1;--f-hero:'Plus Jakarta Sans',sans-serif;--hero-w:800;--hero-st:normal;--hero-k:1;--hero-ls:-.03em;--f-ui:'Plus Jakarta Sans',sans-serif;--ui-w:700}
+.pair-2{--f-lead:'DM Sans',sans-serif;--lead-st:normal;--lead-w:500;--lead-k:.95;--f-hero:'Outfit',sans-serif;--hero-w:700;--hero-st:normal;--hero-k:1.1;--hero-ls:-.025em;--f-ui:'DM Sans',sans-serif;--ui-w:500}
+.pair-3{--f-lead:'Cormorant Garamond',Georgia,serif;--lead-st:italic;--lead-w:600;--lead-k:1.12;--f-hero:'Cormorant Garamond',Georgia,serif;--hero-w:600;--hero-st:italic;--hero-k:1.12;--hero-ls:-.01em;--f-ui:'Plus Jakarta Sans',sans-serif;--ui-w:700}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+/* ===== 8' x 5' backdrop (all units cqw of the backdrop width; 96in = 100cqw) ===== */
+.bd{position:relative;aspect-ratio:16/10;overflow:hidden;container-type:inline-size;background:#15160f;color:var(--forest);font-family:var(--f-ui)}
+.bd.fill{aspect-ratio:auto;width:100%;height:100%}
+.bd-photo{position:absolute;left:0;top:0;width:100%;height:62.5cqw;background:url(assets/field-clean-bg.jpg) center/cover no-repeat}
+.bd-sky{position:absolute;left:0;top:0;width:100%;height:62.5cqw;background:linear-gradient(180deg,rgba(250,248,242,.9) 0,rgba(250,248,242,.88) 24cqw,rgba(250,248,242,.66) 29cqw,rgba(250,248,242,.34) 32.6cqw,rgba(250,248,242,.1) 34.8cqw,rgba(250,248,242,0) 36cqw)}
+.bd-ground{position:absolute;left:0;right:0;top:52cqw;height:10.6cqw;background:linear-gradient(180deg,rgba(8,18,10,0),rgba(8,18,10,.62))}
+.bd-top{position:absolute;left:3.4cqw;right:3.4cqw;top:3cqw;display:flex;justify-content:space-between;align-items:center}
+.bd-brand{display:flex;align-items:center}
+.bd-brand img{height:7.4cqw;width:auto;display:block}
+.bd-brand .nm{margin-left:1.6cqw;padding-left:1.6cqw;border-left:.15cqw solid rgba(20,69,36,.3);font-family:var(--jak);font-weight:800;font-size:1.45cqw;line-height:1.35;letter-spacing:.14em;color:var(--forest)}
+.bd-brand .nm i{font-style:normal;color:var(--earth)}
+.bd-contact{display:flex;align-items:center;gap:1.5cqw;background:linear-gradient(135deg,#144524,#0E3019);border:.14cqw solid rgba(223,192,130,.75);border-radius:99cqw;padding:.8cqw .8cqw .8cqw 2.5cqw;color:var(--ivory);font-family:var(--f-ui);font-weight:var(--ui-w);font-size:1.5cqw;letter-spacing:.01em;white-space:nowrap;box-shadow:0 .6cqw 1.6cqw rgba(9,22,14,.25)}
+.bd-contact b{color:var(--gold-lt);font-weight:800}
+.bd-contact .sp{color:#86c872;margin:0 .7cqw}
+.bd-contact img{width:6.2cqw;height:6.2cqw;background:#fff;padding:.4cqw;border-radius:1cqw;display:block}
+.bd-focal{position:absolute;left:0;right:0;top:13.2cqw;text-align:center}
+.bd-lead{font-family:var(--f-lead);font-style:var(--lead-st);font-weight:var(--lead-w);font-size:calc(2.9cqw*var(--lead-k));line-height:1.2;color:#2b3f31}
+.bd-hero{margin-top:.7cqw;font-family:var(--f-hero);font-weight:var(--hero-w);font-style:var(--hero-st);font-size:calc(11cqw*var(--hero-k));line-height:.98;letter-spacing:var(--hero-ls);color:var(--forest);white-space:nowrap}
+.df{color:var(--earth)}
+.nt{position:relative;display:inline-block}
+.nt::after{content:"";position:absolute;left:.03em;right:.1em;bottom:-.035em;height:.06em;border-radius:.1em;background:linear-gradient(90deg,var(--gold) 0%,var(--gold-lt) 38%,var(--leaf) 100%)}
+.nt::before{content:"";position:absolute;right:.02em;bottom:.005em;width:.13em;height:.085em;background:var(--leaf);border-radius:0 100% 0 100%;transform:rotate(-24deg)}
+.bd-ribbon{position:absolute;left:50%;transform:translateX(-50%);top:31.3cqw;white-space:nowrap;background:rgba(14,48,25,.96);color:var(--ivory);border:.13cqw solid var(--gold);border-radius:99cqw;padding:.85cqw 3.2cqw;font-family:var(--f-ui);font-weight:var(--ui-w);font-size:1.5cqw;letter-spacing:.12em;box-shadow:0 .5cqw 1.4cqw rgba(9,22,14,.25)}
+.bd-ribbon .d{color:var(--gold-lt);margin:0 1.5cqw}
+.bd-ruler{position:absolute;left:3.4cqw;right:3.4cqw;bottom:1.5cqw;color:rgba(250,248,242,.88)}
+.bd-ruler .tk{height:1cqw;border-bottom:.08cqw solid rgba(250,248,242,.8);border-right:.1cqw solid rgba(250,248,242,.8);border-left:.1cqw solid rgba(250,248,242,.8);
+background:repeating-linear-gradient(90deg,rgba(250,248,242,.9) 0 .1cqw,transparent .1cqw calc(100%/8)) left bottom/100% 100% no-repeat,repeating-linear-gradient(90deg,rgba(250,248,242,.5) 0 .06cqw,transparent .06cqw calc(100%/96)) left bottom/100% 45% no-repeat}
+.bd-ruler .cp{display:flex;justify-content:space-between;margin-top:.5cqw;font-family:var(--mono);font-weight:500;font-size:1cqw;letter-spacing:.14em}
+/* guides + table toggle */
+.bd-guides,.bd-table{display:none;position:absolute;left:0;right:0}
+.bd-guides{inset:0;pointer-events:none;z-index:6}
+.show-guides .bd-guides{display:block}
+.bd-guides .safe{position:absolute;inset:2.6cqw;border:.13cqw dashed rgba(214,45,60,.9)}
+.bd-guides .safe em,.bd-guides .tc em{position:absolute;font-style:normal;font-family:var(--mono);font-size:.95cqw;letter-spacing:.1em;background:rgba(255,255,255,.88);padding:.15cqw .6cqw;border-radius:.4cqw;white-space:nowrap}
+.bd-guides .safe em{left:.8cqw;top:-1.05cqw;color:#b4202f}
+.bd-guides .tc{position:absolute;left:0;right:0;top:40.6cqw;border-top:.16cqw dashed #e0592a}
+.bd-guides .tc em{right:3.4cqw;top:-1.15cqw;color:#a63a10}
+.bd-table{top:40.6cqw;bottom:0;z-index:5;background:linear-gradient(180deg,#0f3a22,#082013);border-top:.4cqw solid #1b5c36;align-items:center;justify-content:center;gap:2cqw;color:var(--ivory);font-family:var(--mono);font-size:1.2cqw;letter-spacing:.14em;text-transform:uppercase}
+.show-table .bd-table{display:flex}
+.bd-table .plq{background:var(--ivory);padding:.8cqw 1.6cqw;border-radius:.8cqw}
+.bd-table .plq img{height:5.4cqw;display:block}
 
-    body {
-      background-color: var(--bg-obsidian);
-      background-image:
-        radial-gradient(circle at 15% 10%, rgba(27, 77, 46, 0.35), transparent 45%),
-        radial-gradient(circle at 85% 20%, rgba(198, 159, 89, 0.1), transparent 40%);
-      color: var(--text-light);
-      font-family: var(--sans-jakarta);
-      -webkit-font-smoothing: antialiased;
-      padding: 32px 40px 46px;
-    }
+/* ===== 33" x 80" banner (units cqw of banner width; height = 242.4cqw) ===== */
+.bn{position:relative;aspect-ratio:33/80;overflow:hidden;container-type:inline-size;background:#15160f;font-family:var(--f-ui);color:var(--forest)}
+.bn.fill{aspect-ratio:auto;width:100%;height:100%}
+.bn-photo,.bn-sky{position:absolute;left:0;top:0;width:100%;height:242.4cqw}
+.bn-photo{background:url(assets/field-clean-bg.jpg) 40% top/auto 100% no-repeat}
+.bn-sky{background:linear-gradient(180deg,rgba(250,248,242,.94) 0,rgba(250,248,242,.92) 94cqw,rgba(250,248,242,.6) 112cqw,rgba(250,248,242,.22) 128cqw,rgba(250,248,242,0) 139cqw)}
+.bn-ground{position:absolute;left:0;right:0;top:150cqw;bottom:0;background:linear-gradient(180deg,rgba(8,18,10,0),rgba(8,18,10,.5) 60%,rgba(8,18,10,.8))}
+.bn-logo{position:absolute;top:7cqw;left:0;right:0;text-align:center}
+.bn-logo img{height:20cqw;width:auto}
+.bn-name{position:absolute;top:29cqw;left:0;right:0;text-align:center;font-family:var(--jak);font-weight:800;font-size:3cqw;letter-spacing:.15em;color:var(--forest)}
+.bn-rule{position:absolute;top:36.5cqw;left:30cqw;right:30cqw;height:.5cqw;border-radius:1cqw;background:linear-gradient(90deg,var(--gold),var(--gold-lt),var(--leaf))}
+.bn-lead{position:absolute;top:41cqw;left:6cqw;right:6cqw;text-align:center;text-wrap:balance;font-family:var(--f-lead);font-style:var(--lead-st);font-weight:var(--lead-w);font-size:calc(5.4cqw*var(--lead-k));line-height:1.2;color:#2b3f31}
+.bn-hero{position:absolute;top:60cqw;left:0;right:0;text-align:center;font-family:var(--f-hero);font-weight:var(--hero-w);font-style:var(--hero-st);font-size:calc(13.4cqw*var(--hero-k));line-height:.98;letter-spacing:var(--hero-ls);color:var(--forest)}
+.bn-offers{position:absolute;top:93cqw;left:7cqw;right:7cqw}
+.bn-row{display:flex;align-items:center;gap:3cqw;height:12.4cqw;border-top:.3cqw solid rgba(20,69,36,.4)}
+.bn-row .n{font-family:var(--jak);font-weight:800;font-size:6cqw;color:#9a7430;width:9cqw}
+.bn-row .t{font-family:var(--jak);font-weight:800;font-size:3.6cqw;letter-spacing:.04em;text-transform:uppercase;color:var(--forest);line-height:1.15}
+.bn-row .d{font-family:var(--f-ui);font-weight:500;font-size:2.8cqw;line-height:1.25;color:#33493b;margin-top:.6cqw}
+.bn-cta{position:absolute;top:196cqw;left:6cqw;right:6cqw;display:flex;align-items:center;justify-content:space-between;gap:3cqw;background:linear-gradient(135deg,#144524,#0E3019);border:.35cqw solid rgba(223,192,130,.75);border-radius:4cqw;padding:4cqw 4cqw 4cqw 5cqw;color:var(--ivory)}
+.bn-cta b{display:block;font-family:var(--jak);font-weight:800;font-size:5cqw;color:var(--gold-lt)}
+.bn-cta span{display:block;font-family:var(--f-ui);font-weight:var(--ui-w);font-size:3.1cqw;margin-top:1cqw}
+.bn-cta img{width:23cqw;height:23cqw;background:#fff;padding:1.2cqw;border-radius:2cqw;display:block;flex:none}
 
-    .board {
-      max-width: 1580px;
-      margin: 0 auto;
-    }
+/* ===== staged expo environment (percent geometry of the 1376x768 base plate) ===== */
+.stage{position:relative;aspect-ratio:1376/768;overflow:hidden;background:#777 url(assets/expo-booth-stage.png) center/100% 100% no-repeat}
+.stage .s-bd{position:absolute;left:24.78%;top:19.01%;width:49.42%;height:57.55%;box-shadow:0 0 0 1px rgba(255,255,255,.4)}
+.stage .s-bn{position:absolute;left:77.18%;top:21.09%;width:14.03%;height:64.45%}
+.stage .s-fg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.stage .s-plq{position:absolute;left:21.4%;top:71.4%;width:14.5%;height:11.7%;background:var(--ivory);border-radius:.5em;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.stage .s-plq img{height:78%;width:auto}
+.stage .s-fly{position:absolute;left:39.4%;top:60.9%;width:5.8%;height:1.5%;background:linear-gradient(90deg,#f7f5ee 0 33.3%,#144524 33.3% 66.6%,#f7f5ee 66.6%);border-radius:1px;box-shadow:0 1px 2px rgba(0,0,0,.4)}
+.stage .pin{position:absolute;width:24px;height:24px;margin:-12px 0 0 -12px;border-radius:50%;background:var(--gold-lt);color:#09120D;border:2px solid #09120D;font:700 12px/20px var(--mono);text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.45);z-index:3}
 
-    /* Top Header */
-    .top-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-bottom: 20px;
-      margin-bottom: 24px;
-      border-bottom: 1px solid var(--border-gold);
-    }
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:#F2F5F3;font-family:var(--jak);-webkit-font-smoothing:antialiased;
+background-image:radial-gradient(circle at 12% 4%,rgba(27,77,46,.4),transparent 45%),radial-gradient(circle at 90% 10%,rgba(198,159,89,.1),transparent 40%)}
+.wrap{max-width:1560px;margin:0 auto;padding:28px 36px 60px}
+.hd{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;padding-bottom:16px;border-bottom:1px solid rgba(198,159,89,.35)}
+.hd .k{font:500 10.5px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:5px}
+.hd h1{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:28px}
+.hd h1 span{color:var(--gold-lt);font-style:italic;font-weight:500}
+.dl{display:flex;gap:10px;flex-wrap:wrap}
+.btn{padding:10px 16px;font:600 11px var(--jak);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-radius:4px;border:1px solid rgba(198,159,89,.45);color:var(--gold-lt);background:rgba(16,30,22,.85)}
+.btn.g{background:linear-gradient(135deg,var(--gold-lt),var(--gold));color:#09120D;border:0;font-weight:700}
+.ctl{position:sticky;top:0;z-index:20;display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin:14px 0 6px;padding:10px 14px;background:rgba(9,18,13,.94);backdrop-filter:blur(8px);border:1px solid rgba(198,159,89,.3);border-radius:8px}
+.ctl .l{font:500 10px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.seg{display:flex;gap:6px}
+.seg button,.tg{font:600 11px var(--jak);letter-spacing:.06em;color:#d3ddd7;background:#101E16;border:1px solid rgba(158,179,165,.3);border-radius:99px;padding:7px 14px;cursor:pointer}
+.seg button[aria-pressed=true],.tg[aria-pressed=true]{background:var(--gold-lt);color:#09120D;border-color:var(--gold-lt)}
+h2.s{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:22px;margin:34px 0 4px}
+p.sub{font:500 10.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:14px}
+.row1{display:grid;grid-template-columns:minmax(0,1fr) clamp(220px,22%,330px);gap:20px;align-items:start}
+.panel{background:var(--panel);border:1px solid rgba(198,159,89,.3);border-radius:8px;padding:14px}
+.sh{box-shadow:0 18px 40px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.3)}
+.cap{font:500 10px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:10px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.cap strong{color:var(--gold-lt);font-weight:600}
+.bnbox{max-width:300px;margin:0 auto}
+.stand{height:18px;width:112%;margin:-2px 0 0 -6%;border-radius:3px 3px 10px 10px;background:linear-gradient(180deg,#e9edf0,#9aa3a9 55%,#5c646a);box-shadow:0 8px 14px rgba(0,0,0,.5)}
+.cmp{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cmp button{all:unset;cursor:pointer;display:flex;flex-direction:column;gap:8px;background:var(--panel);border:1px solid rgba(158,179,165,.25);border-radius:8px;padding:10px;box-sizing:border-box}
+.cmp button[aria-pressed=true]{border-color:var(--gold-lt);background:rgba(27,77,46,.3)}
+.cmp h3{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:16px}
+.cmp .f{font:600 11px var(--mono);color:var(--gold-lt)}
+.cmp p{font-size:12px;line-height:1.5;color:#c4d1c9}
+.stagebox{border-radius:6px;overflow:hidden;border:1px solid rgba(198,159,89,.35);box-shadow:0 18px 40px rgba(0,0,0,.5)}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ba figure{position:relative;border:1px solid rgba(255,255,255,.25);border-radius:4px;overflow:hidden}
+.ba img{display:block;width:100%}
+.ba .bdg{position:absolute;left:8px;top:8px;z-index:7;font:600 10px var(--mono);letter-spacing:.12em;text-transform:uppercase;padding:3px 9px;border-radius:2px}
+.ba .b{background:rgba(127,29,29,.92);color:#FECACA}.ba .a{background:rgba(27,77,46,.95);color:#CFEFD0}
+.mets{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+.mets div{background:rgba(9,18,13,.75);border:1px solid rgba(158,179,165,.18);border-left:3px solid var(--gold-lt);padding:9px 12px;font-size:12px;line-height:1.45;color:#d3ddd7}
+.mets strong{display:block;color:var(--gold-lt);font:600 10.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:3px}
+.mets em{font-style:normal;color:#ff9c8f}.mets u{text-decoration:none;color:#9fe08c}
+.sw{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.sw div{border-radius:5px;overflow:hidden;border:1px solid rgba(158,179,165,.25);background:rgba(9,18,13,.7)}
+.sw i{display:block;height:54px}.sw p{padding:6px 8px;font:500 10px/1.4 var(--mono);color:var(--muted)}.sw p b{display:block;color:#F2F5F3;font:700 11.5px var(--jak)}
+.spec{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+.spec div{background:rgba(9,18,13,.75);border:1px solid rgba(158,179,165,.18);border-radius:4px;padding:9px 12px;font-size:12px;color:#d3ddd7}
+.spec strong{display:block;color:var(--gold-lt);font:600 10px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.keys{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:12px;color:#d3ddd7}
+.keys span{display:flex;gap:8px;align-items:center}
+.keys b{width:20px;height:20px;border-radius:50%;background:var(--gold-lt);color:#09120D;font:700 11px/20px var(--mono);text-align:center}
+.stage .pin{width:clamp(16px,1.9vw,26px);height:clamp(16px,1.9vw,26px);font-size:clamp(9px,1vw,13px);line-height:clamp(12px,1.5vw,20px);margin:calc(clamp(16px,1.9vw,26px)/-2) 0 0 calc(clamp(16px,1.9vw,26px)/-2)}
+@media(max-width:900px){.row1,.cmp,.ba,.mets,.spec{grid-template-columns:1fr}.sw{grid-template-columns:repeat(3,1fr)}}
+</style></head><body><div class="wrap" id="app">
+<header class="hd"><div><div class="k">Contest #2800532 · BioNuTech large-format trade-show graphics system</div>
+<h1>8' × 5' Expo Booth Backdrop <span>&amp; 33" × 80" Vertical Banner</span></h1></div>
+<div class="dl"><a class="btn" href="exports/BioNuTech_8x5_Editable_LiveText.svg" download>Live-Text .SVG</a>
+<a class="btn" href="exports/BioNuTech_8x5_CMYK_PressReady_Outlined.pdf" download>Press-Ready CMYK .PDF</a>
+<a class="btn g" href="exports/BioNuTech_Expo_Booth_Master_Pack.zip" download>Download Master Pack (ZIP)</a></div></header>
 
-    .header-left .kicker {
-      font-family: var(--mono);
-      font-size: 10.5px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold-champagne);
-      margin-bottom: 5px;
-    }
+<div class="ctl"><span class="l">Font pairing</span><div class="seg"><button data-pair="1" aria-pressed="false">Option I · Botanical Editorial Authority</button><button data-pair="2" aria-pressed="false">Option II · Precision Agronomic Science</button><button data-pair="3" aria-pressed="false">Option III · Heritage Private-Reserve Ag</button></div>
+<span class="l">Overlays</span><button class="tg" data-toggle="show-table" aria-pressed="false">30" Table Obstruction</button>
+<button class="tg" data-toggle="show-guides" aria-pressed="false">Safe-Zone Guides</button></div>
 
-    .header-left h1 {
-      font-family: var(--serif-fraunces);
-      font-size: 28px;
-      font-weight: 600;
-      color: var(--text-light);
-      letter-spacing: -0.01em;
-    }
-    .header-left h1 span {
-      color: var(--gold-champagne);
-      font-style: italic;
-      font-weight: 500;
-    }
+<h2 class="s">I. Master Backdrop &amp; Coordinated Banner</h2><p class="sub">Live: pick a pairing above, both pieces update</p>
+<section class="row1"><div class="panel"><div class="sh"><div class="bd  show-table">
+<div class="bd-photo"></div><div class="bd-sky"></div><div class="bd-ground"></div>
+<div class="bd-top">
+ <div class="bd-brand"><img src="assets/bnt-root-mark.png" alt="BNT logo with root illustration"><div class="nm">BIOLOGICAL <i>NUTRIENT</i><br>TECHNOLOGIES</div></div>
+ <div class="bd-contact"><span><b>BioNuTech.com</b><i class="sp">·</i>JeffGr@BioNuTech.com<i class="sp">·</i>805-714-0173</span><img src="assets/qr-bionutech.png" alt="QR code to BioNuTech.com"></div>
+</div>
+<div class="bd-focal"><div class="bd-lead">In a world where everyone else is the same,</div>
+<div class="bd-hero">Be <span class="df">differe</span><span class="nt">NT.</span></div></div>
+<div class="bd-ribbon">BIOLOGICAL PLANT NUTRITION<span class="d">·</span>ORGANIC ACIDS<span class="d">·</span>RELIABLE RESULTS</div>
+<div class="bd-ruler"><div class="tk"></div><div class="cp"><span>BNT · BIOLOGICAL NUTRIENT TECHNOLOGIES</span><span>0 FT — 8 FT · 96 IN</span></div></div>
+<div class="bd-guides"><div class="safe"><em>2.5" PRINT-SAFE MARGIN</em></div><div class="tc"><em>30" TABLE-CLEARANCE LINE · critical copy kept above</em></div></div>
+<div class="bd-table"><div class="plq"><img src="assets/bnt-root-mark.png" alt=""></div><span>30" draped table · samples &amp; handouts</span></div>
+</div></div>
+<div class="cap"><span><strong>8' × 5' · 96" × 60"</strong> · 150 DPI CMYK · 0.25" bleed · 2.5" print-safe margin</span><span>Turn on “30" Table Obstruction” to see what the counter hides</span></div></div>
+<div class="panel"><div class="bnbox"><div class="sh"><div class="bn">
+<div class="bn-photo"></div><div class="bn-sky"></div><div class="bn-ground"></div>
+<div class="bn-logo"><img src="assets/bnt-root-mark.png" alt="BNT logo"></div>
+<div class="bn-name">BIOLOGICAL NUTRIENT TECHNOLOGIES</div><div class="bn-rule"></div>
+<div class="bn-lead">In a world where everyone else is the same,</div>
+<div class="bn-hero">Be<br><span class="df">differe</span><span class="nt">NT.</span></div>
+<div class="bn-offers">
+ <div class="bn-row"><div class="n">01</div><div><div class="t">Biological Plant Nutrition</div><div class="d">Rhizosphere vitality for vigorous roots.</div></div></div>
+ <div class="bn-row"><div class="n">02</div><div><div class="t">Organic Acids Complex</div><div class="d">Humic &amp; fulvic chemistry for uptake.</div></div></div>
+ <div class="bn-row"><div class="n">03</div><div><div class="t">Reliable Field Results</div><div class="d">Consistent uniformity and resilience.</div></div></div>
+</div>
+<div class="bn-cta"><div><b>BioNuTech.com</b><span>JeffGr@BioNuTech.com</span><span>805-714-0173</span></div><img src="assets/qr-bionutech.png" alt="QR code"></div>
+</div></div><div class="stand"></div></div>
+<div class="cap" style="justify-content:center"><strong>33" × 80" retractable banner</strong></div></div></section>
 
-    .header-actions {
-      display: flex;
-      gap: 12px;
-    }
-    .btn {
-      padding: 10px 16px;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 4px;
-    }
-    .btn-outline {
-      border: 1px solid var(--border-gold);
-      background: rgba(16, 30, 22, 0.85);
-      color: var(--gold-champagne);
-    }
-    .btn-gold {
-      background: linear-gradient(135deg, var(--gold-champagne), var(--gold-mid));
-      color: #09120D;
-      font-weight: 700;
-    }
+<h2 class="s">II. Three Font Pairings on the Actual Backdrop</h2><p class="sub">Click a card to apply it everywhere</p>
+<section class="cmp"><button data-pair="1" aria-pressed="false"><div class="bd pair-1">
+<div class="bd-photo"></div><div class="bd-sky"></div><div class="bd-ground"></div>
+<div class="bd-top">
+ <div class="bd-brand"><img src="assets/bnt-root-mark.png" alt="BNT logo with root illustration"><div class="nm">BIOLOGICAL <i>NUTRIENT</i><br>TECHNOLOGIES</div></div>
+ <div class="bd-contact"><span><b>BioNuTech.com</b><i class="sp">·</i>JeffGr@BioNuTech.com<i class="sp">·</i>805-714-0173</span><img src="assets/qr-bionutech.png" alt="QR code to BioNuTech.com"></div>
+</div>
+<div class="bd-focal"><div class="bd-lead">In a world where everyone else is the same,</div>
+<div class="bd-hero">Be <span class="df">differe</span><span class="nt">NT.</span></div></div>
+<div class="bd-ribbon">BIOLOGICAL PLANT NUTRITION<span class="d">·</span>ORGANIC ACIDS<span class="d">·</span>RELIABLE RESULTS</div>
 
-    /* Section Label */
-    .section-bar {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      margin-bottom: 14px;
-    }
-    .section-bar h2 {
-      font-family: var(--serif-fraunces);
-      font-size: 20px;
-      font-weight: 500;
-      color: var(--text-light);
-    }
-    .section-bar span {
-      font-family: var(--mono);
-      font-size: 10.5px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--gold-champagne);
-    }
+<div class="bd-guides"><div class="safe"><em>2.5" PRINT-SAFE MARGIN</em></div><div class="tc"><em>30" TABLE-CLEARANCE LINE · critical copy kept above</em></div></div>
 
-    /* ROW 1: 8' x 5' Master Backdrop + Accompanying 33" x 80" Vertical Pop-Up Banner */
-    .booth-showcase-row {
-      display: grid;
-      grid-template-columns: 1.52fr 0.48fr;
-      gap: 24px;
-      margin-bottom: 30px;
-      align-items: stretch;
-    }
+</div><h3>Option I · Botanical Editorial Authority</h3><div class="f">Fraunces Italic + Plus Jakarta Sans ExtraBold</div><p>Editorial serif lead-in over a geometric ExtraBold hero: widest letter-forms at 10 m, warm and credible. Recommended.</p></button><button data-pair="2" aria-pressed="false"><div class="bd pair-2">
+<div class="bd-photo"></div><div class="bd-sky"></div><div class="bd-ground"></div>
+<div class="bd-top">
+ <div class="bd-brand"><img src="assets/bnt-root-mark.png" alt="BNT logo with root illustration"><div class="nm">BIOLOGICAL <i>NUTRIENT</i><br>TECHNOLOGIES</div></div>
+ <div class="bd-contact"><span><b>BioNuTech.com</b><i class="sp">·</i>JeffGr@BioNuTech.com<i class="sp">·</i>805-714-0173</span><img src="assets/qr-bionutech.png" alt="QR code to BioNuTech.com"></div>
+</div>
+<div class="bd-focal"><div class="bd-lead">In a world where everyone else is the same,</div>
+<div class="bd-hero">Be <span class="df">differe</span><span class="nt">NT.</span></div></div>
+<div class="bd-ribbon">BIOLOGICAL PLANT NUTRITION<span class="d">·</span>ORGANIC ACIDS<span class="d">·</span>RELIABLE RESULTS</div>
 
-    .canvas-wrapper {
-      background: var(--bg-panel);
-      border: 1px solid var(--border-gold);
-      border-radius: 8px;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.55);
-    }
+<div class="bd-guides"><div class="safe"><em>2.5" PRINT-SAFE MARGIN</em></div><div class="tc"><em>30" TABLE-CLEARANCE LINE · critical copy kept above</em></div></div>
 
-    .canvas-meta-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
-      font-family: var(--mono);
-      font-size: 10px;
-      color: var(--text-muted);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-    .canvas-meta-top strong {
-      color: var(--gold-champagne);
-    }
+</div><h3>Option II · Precision Agronomic Science</h3><div class="f">Outfit Bold + DM Sans Medium</div><p>Clean geometric sans throughout: reads as lab-grade science, most contemporary of the three.</p></button><button data-pair="3" aria-pressed="false"><div class="bd pair-3">
+<div class="bd-photo"></div><div class="bd-sky"></div><div class="bd-ground"></div>
+<div class="bd-top">
+ <div class="bd-brand"><img src="assets/bnt-root-mark.png" alt="BNT logo with root illustration"><div class="nm">BIOLOGICAL <i>NUTRIENT</i><br>TECHNOLOGIES</div></div>
+ <div class="bd-contact"><span><b>BioNuTech.com</b><i class="sp">·</i>JeffGr@BioNuTech.com<i class="sp">·</i>805-714-0173</span><img src="assets/qr-bionutech.png" alt="QR code to BioNuTech.com"></div>
+</div>
+<div class="bd-focal"><div class="bd-lead">In a world where everyone else is the same,</div>
+<div class="bd-hero">Be <span class="df">differe</span><span class="nt">NT.</span></div></div>
+<div class="bd-ribbon">BIOLOGICAL PLANT NUTRITION<span class="d">·</span>ORGANIC ACIDS<span class="d">·</span>RELIABLE RESULTS</div>
 
-    /* THE 8' x 5' (96" x 60" = 1.6 : 1) MASTER BACKDROP ARTBOARD */
-    .backdrop-8x5 {
-      aspect-ratio: 16 / 10;
-      width: 100%;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      background: url('assets/field-clean-bg.jpg') center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 28px 36px 26px;
-    }
+<div class="bd-guides"><div class="safe"><em>2.5" PRINT-SAFE MARGIN</em></div><div class="tc"><em>30" TABLE-CLEARANCE LINE · critical copy kept above</em></div></div>
 
-    /* Subtle optical sky vignette so upper typography has 10m aisle contrast while keeping bright California sky */
-    .backdrop-8x5::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.72) 38%, rgba(255, 255, 255, 0.15) 56%, rgba(10, 26, 16, 0.35) 78%, rgba(9, 22, 14, 0.88) 100%);
-      pointer-events: none;
-    }
+</div><h3>Option III · Heritage Private-Reserve Ag</h3><div class="f">Cormorant Garamond Semibold Italic + Plus Jakarta Sans Bold</div><p>High-contrast italic serif hero: private-reserve luxury; thinner strokes, so best for close-aisle viewing.</p></button></section>
 
-    /* Print-Safe 2.5" Bleed/Margin Hairline Guide */
-    .safe-margin-guide {
-      position: absolute;
-      inset: 14px;
-      border: 1px dashed rgba(17, 50, 31, 0.25);
-      pointer-events: none;
-      z-index: 2;
-    }
+<h2 class="s">III. Complete Expo Booth Environment</h2><p class="sub">Place · Promise · Positioning — view from the aisle</p>
+<div class="panel"><div class="stagebox"><div class="stage ">
+<div class="s-bd"><div class="bd  fill">
+<div class="bd-photo"></div><div class="bd-sky"></div><div class="bd-ground"></div>
+<div class="bd-top">
+ <div class="bd-brand"><img src="assets/bnt-root-mark.png" alt="BNT logo with root illustration"><div class="nm">BIOLOGICAL <i>NUTRIENT</i><br>TECHNOLOGIES</div></div>
+ <div class="bd-contact"><span><b>BioNuTech.com</b><i class="sp">·</i>JeffGr@BioNuTech.com<i class="sp">·</i>805-714-0173</span><img src="assets/qr-bionutech.png" alt="QR code to BioNuTech.com"></div>
+</div>
+<div class="bd-focal"><div class="bd-lead">In a world where everyone else is the same,</div>
+<div class="bd-hero">Be <span class="df">differe</span><span class="nt">NT.</span></div></div>
+<div class="bd-ribbon">BIOLOGICAL PLANT NUTRITION<span class="d">·</span>ORGANIC ACIDS<span class="d">·</span>RELIABLE RESULTS</div>
 
-    /* Top Row inside 8x5 Backdrop: Brand Identity Lockup (Left) + Executive Contact & QR Card (Right) */
-    .backdrop-top {
-      position: relative;
-      z-index: 3;
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-    }
+<div class="bd-guides"><div class="safe"><em>2.5" PRINT-SAFE MARGIN</em></div><div class="tc"><em>30" TABLE-CLEARANCE LINE · critical copy kept above</em></div></div>
 
-    .brand-plaque {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      background: rgba(252, 251, 247, 0.92);
-      backdrop-filter: blur(8px);
-      padding: 12px 22px 10px 18px;
-      border-radius: 6px;
-      border: 1px solid rgba(17, 50, 31, 0.18);
-      border-left: 5px solid var(--forest-deep);
-      box-shadow: 0 12px 28px rgba(9, 22, 14, 0.14);
-    }
-    .brand-plaque img {
-      height: 82px;
-      width: auto;
-      display: block;
-    }
-    .brand-plaque-text {
-      border-left: 1px solid rgba(17, 50, 31, 0.18);
-      padding-left: 14px;
-    }
-    .brand-plaque-text .full-name {
-      font-family: var(--sans-jakarta);
-      font-size: 14px;
-      font-weight: 800;
-      line-height: 1.22;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--forest-deep);
-    }
-    .brand-plaque-text .full-name span {
-      display: block;
-      color: var(--earth-warm);
-    }
-    .brand-plaque-text .sub-tag {
-      font-family: var(--mono);
-      font-size: 8.5px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #4A6353;
-      margin-top: 4px;
-    }
+</div></div>
+<div class="s-bn"><div class="bn  fill">
+<div class="bn-photo"></div><div class="bn-sky"></div><div class="bn-ground"></div>
+<div class="bn-logo"><img src="assets/bnt-root-mark.png" alt="BNT logo"></div>
+<div class="bn-name">BIOLOGICAL NUTRIENT TECHNOLOGIES</div><div class="bn-rule"></div>
+<div class="bn-lead">In a world where everyone else is the same,</div>
+<div class="bn-hero">Be<br><span class="df">differe</span><span class="nt">NT.</span></div>
+<div class="bn-offers">
+ <div class="bn-row"><div class="n">01</div><div><div class="t">Biological Plant Nutrition</div><div class="d">Rhizosphere vitality for vigorous roots.</div></div></div>
+ <div class="bn-row"><div class="n">02</div><div><div class="t">Organic Acids Complex</div><div class="d">Humic &amp; fulvic chemistry for uptake.</div></div></div>
+ <div class="bn-row"><div class="n">03</div><div><div class="t">Reliable Field Results</div><div class="d">Consistent uniformity and resilience.</div></div></div>
+</div>
+<div class="bn-cta"><div><b>BioNuTech.com</b><span>JeffGr@BioNuTech.com</span><span>805-714-0173</span></div><img src="assets/qr-bionutech.png" alt="QR code"></div>
+</div></div>
+<img class="s-fg" src="assets/expo-table-fg.png" alt="">
+<div class="s-plq"><img src="assets/bnt-root-mark.png" alt="BNT monogram on table drape"></div><div class="s-fly"></div><span class="pin" style="left:24.8%;top:19%">1</span><span class="pin" style="left:84.2%;top:20.5%">2</span><span class="pin" style="left:28.7%;top:68.6%">3</span><span class="pin" style="left:18.2%;top:56.2%">4</span><span class="pin" style="left:42.3%;top:57.2%">5</span></div></div>
+<div class="keys"><span><b>1</b>8' × 5' backdrop</span><span><b>2</b>33" × 80" banner</span><span><b>3</b>6' draped counter, BNT monogram</span><span><b>4</b>Humic &amp; Fulvic Organic Acid samples</span><span><b>5</b>Tri-fold handouts</span></div>
+<div class="cap"><span>Artwork composited on a staged hall photo · products on the table are stand-in samples</span></div></div>
 
-    .contact-plaque {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      background: rgba(17, 50, 31, 0.94);
-      color: var(--ivory-warm);
-      padding: 11px 16px;
-      border-radius: 6px;
-      border: 1px solid rgba(223, 192, 130, 0.45);
-      box-shadow: 0 12px 28px rgba(9, 22, 14, 0.22);
-    }
-    .contact-details {
-      text-align: right;
-    }
-    .contact-details .url {
-      font-family: var(--sans-jakarta);
-      font-size: 16px;
-      font-weight: 800;
-      letter-spacing: 0.02em;
-      color: var(--gold-champagne);
-    }
-    .contact-details .email {
-      font-size: 11px;
-      font-weight: 500;
-      color: #E2ECE5;
-      margin-top: 2px;
-    }
-    .contact-details .phone {
-      font-family: var(--mono);
-      font-size: 12px;
-      font-weight: 600;
-      color: #FFFFFF;
-      letter-spacing: 0.08em;
-      margin-top: 2px;
-    }
-    .contact-qr {
-      width: 54px;
-      height: 54px;
-      border-radius: 4px;
-      background: #FFFFFF;
-      padding: 3px;
-      display: block;
-    }
+<h2 class="s">IV. Before vs. After · Spatial &amp; Hierarchy Audit</h2><p class="sub">Why visitors read it in under 3 seconds</p>
+<section class="panel"><div class="ba"><figure><span class="bdg b">Before · V1 draft</span><img src="assets/original-before.jpg" alt="Original draft"></figure>
+<figure><span class="bdg a">After · Refined</span><div class="bd">
+<div class="bd-photo"></div><div class="bd-sky"></div><div class="bd-ground"></div>
+<div class="bd-top">
+ <div class="bd-brand"><img src="assets/bnt-root-mark.png" alt="BNT logo with root illustration"><div class="nm">BIOLOGICAL <i>NUTRIENT</i><br>TECHNOLOGIES</div></div>
+ <div class="bd-contact"><span><b>BioNuTech.com</b><i class="sp">·</i>JeffGr@BioNuTech.com<i class="sp">·</i>805-714-0173</span><img src="assets/qr-bionutech.png" alt="QR code to BioNuTech.com"></div>
+</div>
+<div class="bd-focal"><div class="bd-lead">In a world where everyone else is the same,</div>
+<div class="bd-hero">Be <span class="df">differe</span><span class="nt">NT.</span></div></div>
+<div class="bd-ribbon">BIOLOGICAL PLANT NUTRITION<span class="d">·</span>ORGANIC ACIDS<span class="d">·</span>RELIABLE RESULTS</div>
 
-    /* Center Eye-Level Focal Zone (10m < 3s Readability) */
-    .backdrop-focal-center {
-      position: relative;
-      z-index: 3;
-      text-align: center;
-      max-width: 86%;
-      margin: -12px auto 0;
-      background: rgba(252, 251, 247, 0.88);
-      backdrop-filter: blur(10px);
-      padding: 20px 38px 22px;
-      border-radius: 8px;
-      border: 1px solid rgba(17, 50, 31, 0.16);
-      box-shadow: 0 18px 40px rgba(9, 22, 14, 0.18);
-    }
-    .backdrop-focal-center .lead-in {
-      font-family: var(--serif-fraunces);
-      font-size: 23px;
-      font-weight: 500;
-      font-style: italic;
-      color: #263E30;
-      letter-spacing: -0.01em;
-      margin-bottom: 4px;
-    }
-    .backdrop-focal-center .hero-hook {
-      font-family: var(--sans-jakarta);
-      font-size: 56px;
-      font-weight: 800;
-      line-height: 1.02;
-      letter-spacing: -0.025em;
-      color: var(--forest-deep);
-      margin-bottom: 12px;
-    }
-    .backdrop-focal-center .hero-hook .diff-word {
-      color: var(--earth-warm);
-    }
-    .backdrop-focal-center .hero-hook .nt-highlight {
-      color: var(--forest-rich);
-      background: linear-gradient(180deg, #1B4D2E 0%, #2E7D32 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      border-bottom: 4px solid var(--leaf-bright);
-      padding-bottom: 1px;
-    }
+<div class="bd-guides"><div class="safe"><em>2.5" PRINT-SAFE MARGIN</em></div><div class="tc"><em>30" TABLE-CLEARANCE LINE · critical copy kept above</em></div></div>
 
-    /* Three Pillars Strip inside Center Focal Card */
-    .promise-pills {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      background: var(--forest-deep);
-      color: var(--ivory-warm);
-      padding: 8px 20px;
-      border-radius: 999px;
-      font-size: 12.5px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      border: 1px solid var(--gold-mid);
-    }
-    .promise-pills .dot {
-      color: var(--leaf-bright);
-      font-size: 15px;
-    }
+</div></figure></div>
+<div class="mets">
+<div><strong>&lt; 3s at 10m Readability</strong><em>Before:</em> single thin weight. <u>After:</u> lead-in, hero and ribbon read in three beats.</div>
+<div><strong>Sky Glare Elimination</strong><em>Before:</em> text on sun-flare sky. <u>After:</u> alabaster .88 gradation; forest on ivory measures 10.4 : 1.</div>
+<div><strong>Table-Height Safe Zone</strong><em>Before:</em> copy near canopy. <u>After:</u> all copy above the 30" line.</div>
+<div><strong>Balanced Luxury Hierarchy</strong><em>Before:</em> logo centred, mixed sizes. <u>After:</u> brand left, contact + QR right, hero centred.</div></div></section>
 
-    /* Bottom Dock inside 8x5 Backdrop */
-    .backdrop-bottom-dock {
-      position: relative;
-      z-index: 3;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: rgba(9, 22, 14, 0.86);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(223, 192, 130, 0.35);
-      border-radius: 6px;
-      padding: 10px 20px;
-      color: var(--ivory-warm);
-    }
-    .dock-metric {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-    .dock-metric strong {
-      color: var(--gold-champagne);
-      font-family: var(--mono);
-    }
-
-    /* ACCOMPANYING 33" x 80" VERTICAL POP-UP BANNER */
-    .vertical-banner-33x80 {
-      flex: 1;
-      position: relative;
-      overflow: hidden;
-      border-radius: 4px;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      background:
-        linear-gradient(180deg, rgba(252, 251, 247, 0.95) 0%, rgba(252, 251, 247, 0.88) 46%, rgba(17, 50, 31, 0.94) 72%, rgba(9, 22, 14, 0.98) 100%),
-        url('assets/field-clean-bg.jpg') center/cover no-repeat;
-      padding: 20px 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      text-align: center;
-    }
-    .v-top-logo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border-bottom: 1px solid rgba(17, 50, 31, 0.16);
-      padding-bottom: 10px;
-    }
-    .v-top-logo img {
-      height: 64px;
-      width: auto;
-    }
-    .v-top-logo span {
-      font-size: 9px;
-      font-weight: 800;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--forest-deep);
-      margin-top: 4px;
-    }
-    .v-hook-block {
-      margin: 10px 0;
-    }
-    .v-hook-block .sub {
-      font-family: var(--serif-fraunces);
-      font-style: italic;
-      font-size: 13px;
-      color: #2B4636;
-    }
-    .v-hook-block h3 {
-      font-size: 26px;
-      font-weight: 800;
-      color: var(--forest-deep);
-      letter-spacing: -0.02em;
-      line-height: 1.08;
-      margin: 3px 0 6px;
-    }
-    .v-hook-block h3 em {
-      font-style: normal;
-      color: var(--earth-warm);
-    }
-    .v-offerings-list {
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-      text-align: left;
-      margin: 6px 0;
-    }
-    .v-offering-card {
-      background: rgba(17, 50, 31, 0.9);
-      border: 1px solid rgba(223, 192, 130, 0.35);
-      border-left: 3px solid var(--leaf-bright);
-      padding: 7px 10px;
-      border-radius: 4px;
-      color: var(--ivory-warm);
-    }
-    .v-offering-card strong {
-      display: block;
-      font-size: 10px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gold-champagne);
-    }
-    .v-offering-card span {
-      font-size: 9.5px;
-      color: #D6E4DA;
-      line-height: 1.3;
-    }
-    .v-bottom-cta {
-      border-top: 1px solid rgba(223, 192, 130, 0.3);
-      padding-top: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      text-align: left;
-    }
-    .v-bottom-cta .txt strong {
-      display: block;
-      font-size: 12px;
-      color: var(--gold-champagne);
-    }
-    .v-bottom-cta .txt span {
-      display: block;
-      font-size: 9.5px;
-      color: #E2ECE5;
-    }
-    .v-bottom-cta img {
-      width: 42px;
-      height: 42px;
-      background: #FFF;
-      padding: 2px;
-      border-radius: 3px;
-    }
-
-    /* ROW 2: Composition Audit (Before vs After) + 3 Recommended Font Pairings */
-    .audit-and-fonts-row {
-      display: grid;
-      grid-template-columns: 0.92fr 1.08fr;
-      gap: 24px;
-    }
-
-    .panel-card {
-      background: var(--bg-panel);
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
-      padding: 18px 20px;
-    }
-
-    .before-after-grid {
-      display: grid;
-      grid-template-columns: 0.88fr 1.12fr;
-      gap: 14px;
-      margin-top: 12px;
-      align-items: center;
-    }
-    .before-thumb-box {
-      position: relative;
-      border: 1px solid rgba(248, 113, 113, 0.4);
-      border-radius: 4px;
-      overflow: hidden;
-    }
-    .before-thumb-box img {
-      width: 100%;
-      display: block;
-    }
-    .before-badge {
-      position: absolute;
-      top: 6px;
-      left: 6px;
-      background: rgba(127, 29, 29, 0.9);
-      color: #FECACA;
-      font-family: var(--mono);
-      font-size: 8.5px;
-      padding: 3px 7px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-    .audit-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .audit-list li {
-      background: rgba(9, 18, 13, 0.7);
-      border: 1px solid var(--border-subtle);
-      border-left: 3px solid var(--gold-champagne);
-      padding: 7px 10px;
-      font-size: 10.5px;
-      line-height: 1.38;
-    }
-    .audit-list li strong {
-      display: block;
-      color: var(--gold-champagne);
-      font-size: 10px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 2px;
-    }
-
-    /* 3 Font Pairings Grid */
-    .font-pairings-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 12px;
-    }
-    .pairing-card {
-      background: rgba(9, 18, 13, 0.78);
-      border: 1px solid var(--border-subtle);
-      border-radius: 6px;
-      padding: 12px 14px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .pairing-card.active {
-      border-color: var(--gold-champagne);
-      background: rgba(27, 77, 46, 0.28);
-    }
-    .pairing-tag {
-      font-family: var(--mono);
-      font-size: 8.5px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--gold-champagne);
-      margin-bottom: 6px;
-    }
-    .sample-lead {
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-bottom: 2px;
-    }
-    .sample-hook {
-      font-size: 21px;
-      line-height: 1.1;
-      color: var(--text-light);
-      margin-bottom: 8px;
-    }
-    .pairing-meta {
-      font-size: 9.5px;
-      color: var(--text-muted);
-      border-top: 1px solid var(--border-subtle);
-      padding-top: 7px;
-      line-height: 1.38;
-    }
-    .pairing-meta strong {
-      color: var(--text-light);
-      display: block;
-    }
-  </style>
-</head>
-<body>
-  <div class="board">
-    <header class="top-header">
-      <div class="header-left">
-        <div class="kicker">CONTEST #2800532 · BIONUTECH LARGE-FORMAT TRADE SHOW GRAPHICS SYSTEM</div>
-        <h1>8' × 5' Expo Booth Backdrop &amp; <span>33" × 80" Vertical Pop-Up Banner</span></h1>
-      </div>
-      <div class="header-actions">
-        <a class="btn btn-outline" href="exports/BioNuTech_8x5_Editable_LiveText.svg" download>Download Live-Text .SVG</a>
-        <a class="btn btn-outline" href="exports/BioNuTech_8x5_CMYK_PressReady_Outlined.pdf" download>Download Press-Ready CMYK .PDF</a>
-        <a class="btn btn-gold" href="exports/BioNuTech_Expo_Booth_Master_Pack.zip" download>Download Full Booth Pack (ZIP)</a>
-      </div>
-    </header>
-
-    <div class="section-bar">
-      <h2>I. Refined 8' × 5' (96" × 60") Expo Backdrop &amp; Coordinated Vertical Pop-Up Banner</h2>
-      <span>✓ 10m Aisle Readability (&lt; 3 Seconds) · ✓ 150 DPI at Full Scale · ✓ CMYK Gamut Safe · ✓ 2.5" Print-Safe Margins</span>
-    </div>
-
-    <section class="booth-showcase-row">
-      <!-- Left: 8' x 5' Master Backdrop -->
-      <div class="canvas-wrapper">
-        <div class="canvas-meta-top">
-          <strong>01 · Master 8' × 5' (96" × 60") Backdrop · Pairing I Applied</strong>
-          <span>Eye-Level Focal Architecture · Upper 65% Table-Clearance Safe Zone</span>
-        </div>
-
-        <div class="backdrop-8x5">
-          <div class="safe-margin-guide"></div>
-
-          <!-- Top Header Bar: Brand Identity Left + Contact & Scan QR Right -->
-          <div class="backdrop-top">
-            <div class="brand-plaque">
-              <img src="assets/bnt-root-mark.png" alt="BNT Biological Nutrient Technologies Root Logo" />
-              <div class="brand-plaque-text">
-                <div class="full-name">
-                  Biological<br/>
-                  <span>Nutrient</span>
-                  Technologies
-                </div>
-                <div class="sub-tag">Advanced Soil &amp; Plant Science</div>
-              </div>
-            </div>
-
-            <div class="contact-plaque">
-              <div class="contact-details">
-                <div class="url">BioNuTech.com</div>
-                <div class="email">JeffGr@BioNuTech.com</div>
-                <div class="phone">805 · 714 · 0173</div>
-              </div>
-              <img class="contact-qr" src="assets/qr-bionutech.png" alt="Scan to Visit BioNuTech.com" />
-            </div>
-          </div>
-
-          <!-- Eye-Level 3-Second Aisle Focal Hook -->
-          <div class="backdrop-focal-center">
-            <div class="lead-in">In a world where everyone else is the same,</div>
-            <div class="hero-hook">
-              Be <span class="diff-word">differe</span><span class="nt-highlight">NT.</span>
-            </div>
-            <div class="promise-pills">
-              <span>Biological Plant Nutrition</span>
-              <span class="dot">·</span>
-              <span>Organic Acids</span>
-              <span class="dot">·</span>
-              <span>Reliable Results</span>
-            </div>
-          </div>
-
-          <!-- Bottom Horizon Frame Bar -->
-          <div class="backdrop-bottom-dock">
-            <div class="dock-metric">
-              <strong>ROOT-ZONE BIOAVAILABILITY</strong>
-              <span>Engineered for High-Yield Commercial Growers</span>
-            </div>
-            <div class="dock-metric">
-              <strong>VISIT OUR BOOTH</strong>
-              <span>Live Product Samples &amp; Agronomic Consultation · BioNuTech.com</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="canvas-meta-top" style="margin-top:10px;margin-bottom:0;">
-          <span>Press Spec: 96" W × 60" H (+ 0.25" Bleed) · CMYK Process Profile</span>
-          <span>Deliverables: Outlined Print PDF + Live Editable Vector Source</span>
-        </div>
-      </div>
-
-      <!-- Right: Accompanying 33" x 80" Vertical Pop-Up Banner -->
-      <div class="canvas-wrapper">
-        <div class="canvas-meta-top">
-          <strong>02 · Vertical Banner (33" × 80")</strong>
-          <span>Coordinated Booth Companion</span>
-        </div>
-
-        <div class="vertical-banner-33x80">
-          <div class="v-top-logo">
-            <img src="assets/bnt-root-mark.png" alt="BNT Root Mark" />
-            <span>Biological Nutrient Technologies</span>
-          </div>
-
-          <div class="v-hook-block">
-            <div class="sub">Where everyone else is the same,</div>
-            <h3>Be <em>differe</em>NT.</h3>
-          </div>
-
-          <div class="v-offerings-list">
-            <div class="v-offering-card">
-              <strong>01 · Biological Plant Nutrition</strong>
-              <span>Targeted microbial &amp; rhizosphere vitality for vigorous root systems.</span>
-            </div>
-            <div class="v-offering-card">
-              <strong>02 · Organic Acids Complex</strong>
-              <span>Superior chelation &amp; nutrient uptake efficiency across soil types.</span>
-            </div>
-            <div class="v-offering-card">
-              <strong>03 · Reliable Field Results</strong>
-              <span>Consistent crop uniformity, stress resilience &amp; measurable ROI.</span>
-            </div>
-          </div>
-
-          <div class="v-bottom-cta">
-            <div class="txt">
-              <strong>BioNuTech.com</strong>
-              <span>JeffGr@BioNuTech.com</span>
-              <span>805-714-0173</span>
-            </div>
-            <img src="assets/qr-bionutech.png" alt="QR" />
-          </div>
-        </div>
-
-        <div class="canvas-meta-top" style="margin-top:10px;margin-bottom:0;">
-          <span>Retractable Stand Ready</span>
-          <span>Included in Master ZIP</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ROW 2: Audit & 3 Font Pairings -->
-    <section class="audit-and-fonts-row">
-      <div class="panel-card">
-        <div class="section-bar" style="margin-bottom:6px;">
-          <h2>II. Spatial &amp; Hierarchy Audit (Original vs. Refined)</h2>
-          <span>Why Visitors Pause in &lt; 3 Seconds</span>
-        </div>
-        <div class="before-after-grid">
-          <div class="before-thumb-box">
-            <span class="before-badge">Original Draft</span>
-            <img src="assets/original-before.jpg" alt="Original Draft" />
-          </div>
-          <ul class="audit-list">
-            <li>
-              <strong>1. Contrast &amp; Sky Glare Fixed</strong>
-              Original dark text floated directly on bright clouds with low contrast. Frosted architectural plaques lock in 10m readability.
-            </li>
-            <li>
-              <strong>2. 3-Second Focal Hierarchy</strong>
-              Elevated "Be differeNT" to 420pt equivalent scale with a botanical underline on "NT" to echo the BNT brand monogram.
-            </li>
-            <li>
-              <strong>3. Executive Contact + QR Dock</strong>
-              Grouped BioNuTech.com, email, phone, and instant-scan QR into a high-contrast forest-and-gold badge at upper-right eye level.
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="panel-card">
-        <div class="section-bar" style="margin-bottom:6px;">
-          <h2>III. Three Recommended Premium Font Pairings</h2>
-          <span>All 3 Included in Working Files</span>
-        </div>
-        <div class="font-pairings-grid">
-          <div class="pairing-card active">
-            <div>
-              <div class="pairing-tag">Pairing I · Applied Master</div>
-              <div class="sample-lead" style="font-family:var(--serif-fraunces);font-style:italic;">In a world where everyone else...</div>
-              <div class="sample-hook" style="font-family:var(--sans-jakarta);font-weight:800;">Be differeNT.</div>
-            </div>
-            <div class="pairing-meta">
-              <strong>Fraunces Italic + Plus Jakarta Sans ExtraBold</strong>
-              Combines editorial agricultural heritage with commanding 10-meter geometric punch.
-            </div>
-          </div>
-
-          <div class="pairing-card">
-            <div>
-              <div class="pairing-tag">Pairing II · Biotech Precision</div>
-              <div class="sample-lead" style="font-family:var(--sans-outfit);font-weight:500;">In a world where everyone else...</div>
-              <div class="sample-hook" style="font-family:var(--sans-outfit);font-weight:700;">Be differeNT.</div>
-            </div>
-            <div class="pairing-meta">
-              <strong>Outfit Bold + DM Sans Medium</strong>
-              Clean, contemporary scientific authority with open counters for wide-angle aisle viewing.
-            </div>
-          </div>
-
-          <div class="pairing-card">
-            <div>
-              <div class="pairing-tag">Pairing III · Classic Luxury</div>
-              <div class="sample-lead" style="font-family:var(--serif-cormorant);font-style:italic;font-size:14px;">In a world where everyone else...</div>
-              <div class="sample-hook" style="font-family:var(--serif-cormorant);font-weight:700;font-size:24px;">Be differeNT.</div>
-            </div>
-            <div class="pairing-meta">
-              <strong>Cormorant Garamond Bold + Plus Jakarta Sans</strong>
-              High-fashion editorial contrast suited for executive investor &amp; distributor expos.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-</body>
-</html>
+<h2 class="s">V. Palette &amp; Print Production</h2><p class="sub">Gamut-safe process palette</p>
+<section class="panel"><div class="sw">
+<div><i style="background:#144524"></i><p><b>Chlorophyll</b>#144524</p></div><div><i style="background:#0E3019"></i><p><b>Deep Forest</b>#0E3019</p></div>
+<div><i style="background:#704224"></i><p><b>Humic Earth</b>#704224</p></div><div><i style="background:#FAF8F2"></i><p><b>Alabaster</b>#FAF8F2</p></div>
+<div><i style="background:#C69F59"></i><p><b>Champagne</b>#C69F59</p></div><div><i style="background:#4C9A3A"></i><p><b>Leaf</b>#4C9A3A</p></div></div>
+<div class="spec"><div><strong>Resolution</strong>150 DPI at 96" × 60"</div><div><strong>Bleed</strong>0.25" all sides</div>
+<div><strong>Files</strong>Live editable vector + outlined press PDF</div><div><strong>Margins</strong>2.5" print-safe; copy above 30" line</div></div></section>
+</div><script>
+const app=document.getElementById('app');
+function setPair(n){['pair-1','pair-2','pair-3'].forEach(c=>app.classList.remove(c));app.classList.add('pair-'+n);
+document.querySelectorAll('[data-pair]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.pair==n)));}
+document.querySelectorAll('[data-pair]').forEach(b=>b.addEventListener('click',()=>setPair(b.dataset.pair)));
+document.querySelectorAll('[data-toggle]').forEach(b=>b.addEventListener('click',()=>{
+ const on=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',String(on));
+ app.classList.toggle(b.dataset.toggle,on);}));
+setPair(1);
+</script></body></html>
