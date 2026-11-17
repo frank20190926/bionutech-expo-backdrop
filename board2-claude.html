@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Sheet 02 · BioNuTech Expo Booth Environment</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500;1,600;1,700&family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#144524;--forest-deep:#0E3019;--earth:#704224;--gold:#C69F59;--gold-lt:#DFC082;--ivory:#FAF8F2;
+--leaf:#4C9A3A;--ink:#09120D;--panel:#101E16;--muted:#9EB3A5;--jak:'Plus Jakarta Sans',-apple-system,sans-serif;
+--mono:'JetBrains Mono',ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+.pair-1{--f-lead:'Fraunces',Georgia,serif;--lead-st:italic;--lead-w:500;--lead-k:1;--f-hero:'Plus Jakarta Sans',sans-serif;--hero-w:800;--hero-st:normal;--hero-k:1;--hero-ls:-.03em;--f-ui:'Plus Jakarta Sans',sans-serif;--ui-w:700}
+.pair-2{--f-lead:'DM Sans',sans-serif;--lead-st:normal;--lead-w:500;--lead-k:.95;--f-hero:'Outfit',sans-serif;--hero-w:700;--hero-st:normal;--hero-k:1.1;--hero-ls:-.025em;--f-ui:'DM Sans',sans-serif;--ui-w:500}
+.pair-3{--f-lead:'Cormorant Garamond',Georgia,serif;--lead-st:italic;--lead-w:600;--lead-k:1.12;--f-hero:'Cormorant Garamond',Georgia,serif;--hero-w:600;--hero-st:italic;--hero-k:1.12;--hero-ls:-.01em;--f-ui:'Plus Jakarta Sans',sans-serif;--ui-w:700}
+
+/* ===== 8' x 5' backdrop (all units cqw of the backdrop width; 96in = 100cqw) ===== */
+.bd{position:relative;aspect-ratio:16/10;overflow:hidden;container-type:inline-size;background:#15160f;color:var(--forest);font-family:var(--f-ui)}
+.bd.fill{aspect-ratio:auto;width:100%;height:100%}
+.bd-photo{position:absolute;left:0;top:0;width:100%;height:62.5cqw;background:url(assets/field-clean-bg.jpg) center/cover no-repeat}
+.bd-sky{position:absolute;left:0;top:0;width:100%;height:62.5cqw;background:linear-gradient(180deg,rgba(250,248,242,.9) 0,rgba(250,248,242,.88) 24cqw,rgba(250,248,242,.66) 29cqw,rgba(250,248,242,.34) 32.6cqw,rgba(250,248,242,.1) 34.8cqw,rgba(250,248,242,0) 36cqw)}
+.bd-ground{position:absolute;left:0;right:0;top:52cqw;height:10.6cqw;background:linear-gradient(180deg,rgba(8,18,10,0),rgba(8,18,10,.62))}
+.bd-top{position:absolute;left:3.4cqw;right:3.4cqw;top:3cqw;display:flex;justify-content:space-between;align-items:center}
+.bd-brand{display:flex;align-items:center}
+.bd-brand img{height:7.4cqw;width:auto;display:block}
+.bd-brand .nm{margin-left:1.6cqw;padding-left:1.6cqw;border-left:.15cqw solid rgba(20,69,36,.3);font-family:var(--jak);font-weight:800;font-size:1.45cqw;line-height:1.35;letter-spacing:.14em;color:var(--forest)}
+.bd-brand .nm i{font-style:normal;color:var(--earth)}
+.bd-contact{display:flex;align-items:center;gap:1.5cqw;background:linear-gradient(135deg,#144524,#0E3019);border:.14cqw solid rgba(223,192,130,.75);border-radius:99cqw;padding:.8cqw .8cqw .8cqw 2.5cqw;color:var(--ivory);font-family:var(--f-ui);font-weight:var(--ui-w);font-size:1.5cqw;letter-spacing:.01em;white-space:nowrap;box-shadow:0 .6cqw 1.6cqw rgba(9,22,14,.25)}
+.bd-contact b{color:var(--gold-lt);font-weight:800}
+.bd-contact .sp{color:#86c872;margin:0 .7cqw}
+.bd-contact img{width:6.2cqw;height:6.2cqw;background:#fff;padding:.4cqw;border-radius:1cqw;display:block}
+.bd-focal{position:absolute;left:0;right:0;top:13.2cqw;text-align:center}
+.bd-lead{font-family:var(--f-lead);font-style:var(--lead-st);font-weight:var(--lead-w);font-size:calc(2.9cqw*var(--lead-k));line-height:1.2;color:#2b3f31}
+.bd-hero{margin-top:.7cqw;font-family:var(--f-hero);font-weight:var(--hero-w);font-style:var(--hero-st);font-size:calc(11cqw*var(--hero-k));line-height:.98;letter-spacing:var(--hero-ls);color:var(--forest);white-space:nowrap}
+.df{color:var(--earth)}
+.nt{position:relative;display:inline-block}
+.nt::after{content:"";position:absolute;left:.03em;right:.1em;bottom:-.035em;height:.06em;border-radius:.1em;background:linear-gradient(90deg,var(--gold) 0%,var(--gold-lt) 38%,var(--leaf) 100%)}
+.nt::before{content:"";position:absolute;right:.02em;bottom:.005em;width:.13em;height:.085em;background:var(--leaf);border-radius:0 100% 0 100%;transform:rotate(-24deg)}
+.bd-ribbon{position:absolute;left:50%;transform:translateX(-50%);top:31.3cqw;white-space:nowrap;background:rgba(14,48,25,.96);color:var(--ivory);border:.13cqw solid var(--gold);border-radius:99cqw;padding:.85cqw 3.2cqw;font-family:var(--f-ui);font-weight:var(--ui-w);font-size:1.5cqw;letter-spacing:.12em;box-shadow:0 .5cqw 1.4cqw rgba(9,22,14,.25)}
+.bd-ribbon .d{color:var(--gold-lt);margin:0 1.5cqw}
+.bd-ruler{position:absolute;left:3.4cqw;right:3.4cqw;bottom:1.5cqw;color:rgba(250,248,242,.88)}
+.bd-ruler .tk{height:1cqw;border-bottom:.08cqw solid rgba(250,248,242,.8);border-right:.1cqw solid rgba(250,248,242,.8);border-left:.1cqw solid rgba(250,248,242,.8);
+background:repeating-linear-gradient(90deg,rgba(250,248,242,.9) 0 .1cqw,transparent .1cqw calc(100%/8)) left bottom/100% 100% no-repeat,repeating-linear-gradient(90deg,rgba(250,248,242,.5) 0 .06cqw,transparent .06cqw calc(100%/96)) left bottom/100% 45% no-repeat}
+.bd-ruler .cp{display:flex;justify-content:space-between;margin-top:.5cqw;font-family:var(--mono);font-weight:500;font-size:1cqw;letter-spacing:.14em}
+/* guides + table toggle */
+.bd-guides,.bd-table{display:none;position:absolute;left:0;right:0}
+.bd-guides{inset:0;pointer-events:none;z-index:6}
+.show-guides .bd-guides{display:block}
+.bd-guides .safe{position:absolute;inset:2.6cqw;border:.13cqw dashed rgba(214,45,60,.9)}
+.bd-guides .safe em,.bd-guides .tc em{position:absolute;font-style:normal;font-family:var(--mono);font-size:.95cqw;letter-spacing:.1em;background:rgba(255,255,255,.88);padding:.15cqw .6cqw;border-radius:.4cqw;white-space:nowrap}
+.bd-guides .safe em{left:.8cqw;top:-1.05cqw;color:#b4202f}
+.bd-guides .tc{position:absolute;left:0;right:0;top:40.6cqw;border-top:.16cqw dashed #e0592a}
+.bd-guides .tc em{right:3.4cqw;top:-1.15cqw;color:#a63a10}
+.bd-table{top:40.6cqw;bottom:0;z-index:5;background:linear-gradient(180deg,#0f3a22,#082013);border-top:.4cqw solid #1b5c36;align-items:center;justify-content:center;gap:2cqw;color:var(--ivory);font-family:var(--mono);font-size:1.2cqw;letter-spacing:.14em;text-transform:uppercase}
+.show-table .bd-table{display:flex}
+.bd-table .plq{background:var(--ivory);padding:.8cqw 1.6cqw;border-radius:.8cqw}
+.bd-table .plq img{height:5.4cqw;display:block}
+
+/* ===== 33" x 80" banner (units cqw of banner width; height = 242.4cqw) ===== */
+.bn{position:relative;aspect-ratio:33/80;overflow:hidden;container-type:inline-size;background:#15160f;font-family:var(--f-ui);color:var(--forest)}
+.bn.fill{aspect-ratio:auto;width:100%;height:100%}
+.bn-photo,.bn-sky{position:absolute;left:0;top:0;width:100%;height:242.4cqw}
+.bn-photo{background:url(assets/field-clean-bg.jpg) 40% top/auto 100% no-repeat}
+.bn-sky{background:linear-gradient(180deg,rgba(250,248,242,.94) 0,rgba(250,248,242,.92) 94cqw,rgba(250,248,242,.6) 112cqw,rgba(250,248,242,.22) 128cqw,rgba(250,248,242,0) 139cqw)}
+.bn-ground{position:absolute;left:0;right:0;top:150cqw;bottom:0;background:linear-gradient(180deg,rgba(8,18,10,0),rgba(8,18,10,.5) 60%,rgba(8,18,10,.8))}
+.bn-logo{position:absolute;top:7cqw;left:0;right:0;text-align:center}
+.bn-logo img{height:20cqw;width:auto}
+.bn-name{position:absolute;top:29cqw;left:0;right:0;text-align:center;font-family:var(--jak);font-weight:800;font-size:3cqw;letter-spacing:.15em;color:var(--forest)}
+.bn-rule{position:absolute;top:36.5cqw;left:30cqw;right:30cqw;height:.5cqw;border-radius:1cqw;background:linear-gradient(90deg,var(--gold),var(--gold-lt),var(--leaf))}
+.bn-lead{position:absolute;top:41cqw;left:6cqw;right:6cqw;text-align:center;text-wrap:balance;font-family:var(--f-lead);font-style:var(--lead-st);font-weight:var(--lead-w);font-size:calc(5.4cqw*var(--lead-k));line-height:1.2;color:#2b3f31}
+.bn-hero{position:absolute;top:60cqw;left:0;right:0;text-align:center;font-family:var(--f-hero);font-weight:var(--hero-w);font-style:var(--hero-st);font-size:calc(13.4cqw*var(--hero-k));line-height:.98;letter-spacing:var(--hero-ls);color:var(--forest)}
+.bn-offers{position:absolute;top:93cqw;left:7cqw;right:7cqw}
+.bn-row{display:flex;align-items:center;gap:3cqw;height:12.4cqw;border-top:.3cqw solid rgba(20,69,36,.4)}
+.bn-row .n{font-family:var(--jak);font-weight:800;font-size:6cqw;color:#9a7430;width:9cqw}
+.bn-row .t{font-family:var(--jak);font-weight:800;font-size:3.6cqw;letter-spacing:.04em;text-transform:uppercase;color:var(--forest);line-height:1.15}
+.bn-row .d{font-family:var(--f-ui);font-weight:500;font-size:2.8cqw;line-height:1.25;color:#33493b;margin-top:.6cqw}
+.bn-cta{position:absolute;top:196cqw;left:6cqw;right:6cqw;display:flex;align-items:center;justify-content:space-between;gap:3cqw;background:linear-gradient(135deg,#144524,#0E3019);border:.35cqw solid rgba(223,192,130,.75);border-radius:4cqw;padding:4cqw 4cqw 4cqw 5cqw;color:var(--ivory)}
+.bn-cta b{display:block;font-family:var(--jak);font-weight:800;font-size:5cqw;color:var(--gold-lt)}
+.bn-cta span{display:block;font-family:var(--f-ui);font-weight:var(--ui-w);font-size:3.1cqw;margin-top:1cqw}
+.bn-cta img{width:23cqw;height:23cqw;background:#fff;padding:1.2cqw;border-radius:2cqw;display:block;flex:none}
+
+/* ===== staged expo environment (percent geometry of the 1376x768 base plate) ===== */
+.stage{position:relative;aspect-ratio:1376/768;overflow:hidden;background:#777 url(assets/expo-booth-stage.png) center/100% 100% no-repeat}
+.stage .s-bd{position:absolute;left:24.78%;top:19.01%;width:49.42%;height:57.55%;box-shadow:0 0 0 1px rgba(255,255,255,.4)}
+.stage .s-bn{position:absolute;left:77.18%;top:21.09%;width:14.03%;height:64.45%}
+.stage .s-fg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.stage .s-plq{position:absolute;left:21.4%;top:71.4%;width:14.5%;height:11.7%;background:var(--ivory);border-radius:.5em;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.stage .s-plq img{height:78%;width:auto}
+.stage .s-fly{position:absolute;left:39.4%;top:60.9%;width:5.8%;height:1.5%;background:linear-gradient(90deg,#f7f5ee 0 33.3%,#144524 33.3% 66.6%,#f7f5ee 66.6%);border-radius:1px;box-shadow:0 1px 2px rgba(0,0,0,.4)}
+.stage .pin{position:absolute;width:24px;height:24px;margin:-12px 0 0 -12px;border-radius:50%;background:var(--gold-lt);color:#09120D;border:2px solid #09120D;font:700 12px/20px var(--mono);text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.45);z-index:3}
+
+html,body{width:1600px;height:1200px;overflow:hidden;background:var(--ink)}
+body{font-family:var(--jak);color:#F2F5F3;-webkit-font-smoothing:antialiased}
+.sheet{position:relative;width:1600px;height:1200px;overflow:hidden;padding:24px 28px;display:flex;flex-direction:column;gap:14px;
+background:radial-gradient(circle at 12% 6%,rgba(27,77,46,.4),transparent 45%),radial-gradient(circle at 90% 12%,rgba(198,159,89,.1),transparent 40%),var(--ink)}
+.hd{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:10px;border-bottom:1px solid rgba(198,159,89,.35);flex:none}
+.hd .k{font:500 10.5px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:4px}
+.hd h1{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:25px;letter-spacing:-.01em}
+.hd h1 span{color:var(--gold-lt);font-style:italic;font-weight:500}
+.hd .r{font:500 10px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:right;line-height:1.6}
+.card{background:var(--panel);border:1px solid rgba(198,159,89,.3);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;min-width:0}
+.mt{display:flex;justify-content:space-between;align-items:baseline;font:500 10px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;gap:12px}
+.mt strong{color:var(--gold-lt);font-weight:600}
+h2.t{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:17px;margin-bottom:8px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.chips span{font:500 9.5px var(--mono);letter-spacing:.08em;color:var(--gold-lt);border:1px solid rgba(198,159,89,.4);border-radius:99px;padding:3px 10px;background:rgba(9,18,13,.7);white-space:nowrap}
+
+.top{display:grid;grid-template-columns:930px 1fr;gap:16px;flex:none}
+.stagebox{border-radius:6px;overflow:hidden;border:1px solid rgba(198,159,89,.35);box-shadow:0 18px 40px rgba(0,0,0,.5)}
+.lg{display:flex;flex-direction:column;gap:8px;flex:1}
+.sheet{gap:20px}
+.pp{background:rgba(9,18,13,.75);border:1px solid rgba(158,179,165,.18);border-left:3px solid var(--gold-lt);padding:11px 14px;font-size:12.5px;line-height:1.5;color:#d3ddd7}
+.pp strong{display:block;font:600 10px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:2px}
+.keys{display:grid;gap:8px;font-size:12px;color:#d3ddd7;margin-top:2px}
+.keys span{display:flex;gap:8px;align-items:center;line-height:1.35}
+.keys b{flex:none;width:18px;height:18px;border-radius:50%;background:var(--gold-lt);color:#09120D;font:700 10px/18px var(--mono);text-align:center}
+.pairs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;flex:none}
+.pr{background:var(--panel);border:1px solid rgba(158,179,165,.2);border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:7px;min-width:0}
+.pr.rec{border-color:var(--gold-lt);background:rgba(27,77,46,.28)}
+.pr .bd{border:1px solid rgba(255,255,255,.25)}
+.pr h3{font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:15px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.pr h3 em{font:600 8.5px var(--mono);letter-spacing:.12em;background:var(--gold-lt);color:#09120D;padding:2px 8px;border-radius:99px;font-style:normal;white-space:nowrap}
+.pr .f{font:600 10.5px var(--mono);color:var(--gold-lt);letter-spacing:.02em}
+.pr p{font-size:11px;line-height:1.5;color:#c4d1c9}
+</style></head><body><div class="sheet pair-1">
+<header class="hd"><div><div class="k">Contest #2800532 · BioNuTech · Sheet 02 of 02</div>
+<h1>Sheet 02 · Complete 10-Meter Expo Booth Environment <span>&amp; 3 Font Pairing Options</span></h1></div>
+<div class="r">Place · Promise · Positioning<br>Backdrop + Pop-Up + Table samples / flyers</div></header>
+
+<section class="top">
+ <div class="card" style="padding:10px">
+  <div class="mt"><strong>Booth Environment Simulation</strong><span>View from the expo aisle</span></div>
+  <div class="stagebox"><div class="stage ">
+<div class="s-bd"><div class="bd  fill">
+<div class="bd-photo"></div><div class="bd-sky"></div><div class="bd-ground"></div>
+<div class="bd-top">
+ <div class="bd-brand"><img src="assets/bnt-root-mark.png" alt="BNT logo with root illustration"><div class="nm">BIOLOGICAL <i>NUTRIENT</i><br>TECHNOLOGIES</div></div>
+ <div class="bd-contact"><span><b>BioNuTech.com</b><i class="sp">·</i>JeffGr@BioNuTech.com<i class="sp">·</i>805-714-0173</span><img src="assets/qr-bionutech.png" alt="QR code to BioNuTech.com"></div>
+</div>
+<div class="bd-focal"><div class="bd-lead">In a world where everyone else is the same,</div>
+<div class="bd-hero">Be <span class="df">differe</span><span class="nt">NT.</span></div></div>
+<div class="bd-ribbon">BIOLOGICAL PLANT NUTRITION<span class="d">·</span>ORGANIC ACIDS<span class="d">·</span>RELIABLE RESULTS</div>
+
+<div class="bd-guides"><div class="safe"><em>2.5" PRINT-SAFE MARGIN</em></div><div class="tc"><em>30" TABLE-CLEARANCE LINE · critical copy kept above</em></div></div>
+
+</div></div>
+<div class="s-bn"><div class="bn  fill">
+<div class="bn-photo"></div><div class="bn-sky"></div><div class="bn-ground"></div>
+<div class="bn-logo"><img src="assets/bnt-root-mark.png" alt="BNT logo"></div>
+<div class="bn-name">BIOLOGICAL NUTRIENT TECHNOLOGIES</div><div class="bn-rule"></div>
+<div class="bn-lead">In a world where everyone else is the same,</div>
+<div class="bn-hero">Be<br><span class="df">differe</span><span class="nt">NT.</span></div>
+<div class="bn-offers">
+ <div class="bn-row"><div class="n">01</div><div><div class="t">Biological Plant Nutrition</div><div class="d">Rhizosphere vitality for vigorous roots.</div></div></div>
+ <div class="bn-row"><div class="n">02</div><div><div class="t">Organic Acids Complex</div><div class="d">Humic &amp; fulvic chemistry for uptake.</div></div></div>
+ <div class="bn-row"><div class="n">03</div><div><div class="t">Reliable Field Results</div><div class="d">Consistent uniformity and resilience.</div></div></div>
+</div>
+<div class="bn-cta"><div><b>BioNuTech.com</b><span>JeffGr@BioNuTech.com</span><span>805-714-0173</span></div><img src="assets/qr-bionutech.png" alt="QR code"></div>
+</div></div>
+<img class="s-fg" src="assets/expo-table-fg.png" alt="">
+<div class="s-plq"><img src="assets/bnt-root-mark.png" alt="BNT monogram on table drape"></div><div class="s-fly"></div><span class="pin" style="left:24.8%;top:19%">1</span><span class="pin" style="left:84.2%;top:20.5%">2</span><span class="pin" style="left:28.7%;top:68.6%">3</span><span class="pin" style="left:18.2%;top:56.2%">4</span><span class="pin" style="left:42.3%;top:57.2%">5</span></div></div>
+ </div>
+ <div class="card">
+  <h2 class="t">Place, Promise &amp; Positioning</h2>
+  <div class="lg">
+   <div class="pp"><strong>Place</strong>8' × 5' backdrop on the rear frame carries the field horizon at eye level; the 33" × 80" banner repeats the same horizon line at the aisle edge; the 6-foot draped counter sits in front.</div>
+   <div class="pp"><strong>Promise</strong>"Be differeNT." is readable in under 3 seconds; the ribbon states the three offers: Biological Plant Nutrition · Organic Acids · Reliable Results.</div>
+   <div class="pp"><strong>Positioning</strong>Luxury biological nutrition for commercial growers: ivory, forest and humic-earth palette, no pop-up card blocking the horizon; table, bottles and flyers stay below the clearance line.</div>
+   <div class="keys">
+    <span><b>1</b>8' × 5' (96" × 60") backdrop, rear exhibition frame</span>
+    <span><b>2</b>33" × 80" retractable vertical banner</span>
+    <span><b>3</b>6-foot draped counter with BNT monogram</span>
+    <span><b>4</b>Product samples: Humic &amp; Fulvic Organic Acids</span>
+    <span><b>5</b>Printed tri-fold handout flyers</span>
+   </div>
+   <div class="chips" style="margin-top:auto"><span>Artwork composited on a staged hall photo</span><span>Products on table: stand-in samples</span></div>
+  </div>
+ </div>
+</section>
+
+<div class="mt" style="margin:2px 2px 0;flex:none"><strong style="font-size:12px">Three Complete 8' × 5' Backdrop Font Pairings · Rendered on the Actual Field Background</strong><span>Pairing I / II / III</span></div>
+<section class="pairs"><div class="pr rec"><h3>Option I · Botanical Editorial Authority<em>RECOMMENDED</em></h3>
+<div class="bd pair-1">
+<div class="bd-photo"></div><div class="bd-sky"></div><div class="bd-ground"></div>
+<div class="bd-top">
+ <div class="bd-brand"><img src="assets/bnt-root-mark.png" alt="BNT logo with root illustration"><div class="nm">BIOLOGICAL <i>NUTRIENT</i><br>TECHNOLOGIES</div></div>
+ <div class="bd-contact"><span><b>BioNuTech.com</b><i class="sp">·</i>JeffGr@BioNuTech.com<i class="sp">·</i>805-714-0173</span><img src="assets/qr-bionutech.png" alt="QR code to BioNuTech.com"></div>
+</div>
+<div class="bd-focal"><div class="bd-lead">In a world where everyone else is the same,</div>
+<div class="bd-hero">Be <span class="df">differe</span><span class="nt">NT.</span></div></div>
+<div class="bd-ribbon">BIOLOGICAL PLANT NUTRITION<span class="d">·</span>ORGANIC ACIDS<span class="d">·</span>RELIABLE RESULTS</div>
+
+<div class="bd-guides"><div class="safe"><em>2.5" PRINT-SAFE MARGIN</em></div><div class="tc"><em>30" TABLE-CLEARANCE LINE · critical copy kept above</em></div></div>
+
+</div><div class="f">Fraunces Italic + Plus Jakarta Sans ExtraBold</div><p>Editorial serif lead-in over a geometric ExtraBold hero: widest letter-forms at 10 m, warm and credible. Recommended.</p></div><div class="pr"><h3>Option II · Precision Agronomic Science</h3>
+<div class="bd pair-2">
+<div class="bd-photo"></div><div class="bd-sky"></div><div class="bd-ground"></div>
+<div class="bd-top">
+ <div class="bd-brand"><img src="assets/bnt-root-mark.png" alt="BNT logo with root illustration"><div class="nm">BIOLOGICAL <i>NUTRIENT</i><br>TECHNOLOGIES</div></div>
+ <div class="bd-contact"><span><b>BioNuTech.com</b><i class="sp">·</i>JeffGr@BioNuTech.com<i class="sp">·</i>805-714-0173</span><img src="assets/qr-bionutech.png" alt="QR code to BioNuTech.com"></div>
+</div>
+<div class="bd-focal"><div class="bd-lead">In a world where everyone else is the same,</div>
+<div class="bd-hero">Be <span class="df">differe</span><span class="nt">NT.</span></div></div>
+<div class="bd-ribbon">BIOLOGICAL PLANT NUTRITION<span class="d">·</span>ORGANIC ACIDS<span class="d">·</span>RELIABLE RESULTS</div>
+
+<div class="bd-guides"><div class="safe"><em>2.5" PRINT-SAFE MARGIN</em></div><div class="tc"><em>30" TABLE-CLEARANCE LINE · critical copy kept above</em></div></div>
+
+</div><div class="f">Outfit Bold + DM Sans Medium</div><p>Clean geometric sans throughout: reads as lab-grade science, most contemporary of the three.</p></div><div class="pr"><h3>Option III · Heritage Private-Reserve Ag</h3>
+<div class="bd pair-3">
+<div class="bd-photo"></div><div class="bd-sky"></div><div class="bd-ground"></div>
+<div class="bd-top">
+ <div class="bd-brand"><img src="assets/bnt-root-mark.png" alt="BNT logo with root illustration"><div class="nm">BIOLOGICAL <i>NUTRIENT</i><br>TECHNOLOGIES</div></div>
+ <div class="bd-contact"><span><b>BioNuTech.com</b><i class="sp">·</i>JeffGr@BioNuTech.com<i class="sp">·</i>805-714-0173</span><img src="assets/qr-bionutech.png" alt="QR code to BioNuTech.com"></div>
+</div>
+<div class="bd-focal"><div class="bd-lead">In a world where everyone else is the same,</div>
+<div class="bd-hero">Be <span class="df">differe</span><span class="nt">NT.</span></div></div>
+<div class="bd-ribbon">BIOLOGICAL PLANT NUTRITION<span class="d">·</span>ORGANIC ACIDS<span class="d">·</span>RELIABLE RESULTS</div>
+
+<div class="bd-guides"><div class="safe"><em>2.5" PRINT-SAFE MARGIN</em></div><div class="tc"><em>30" TABLE-CLEARANCE LINE · critical copy kept above</em></div></div>
+
+</div><div class="f">Cormorant Garamond Semibold Italic + Plus Jakarta Sans Bold</div><p>High-contrast italic serif hero: private-reserve luxury; thinner strokes, so best for close-aisle viewing.</p></div></section>
+</div></body></html>
